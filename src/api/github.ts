@@ -270,6 +270,25 @@ function getPreferredRelease(
   return releases.find((release) => !release.prerelease) ?? releases[0] ?? null;
 }
 
+// ponytail: simple linear scan, releases list is small (<1000)
+function getPreRelease(releases: GitHubRelease[]): GitHubRelease | null {
+  return releases.find((release) => release.prerelease) ?? null;
+}
+
+function showPrereleaseCard(): void {
+  const card = document.getElementById("prerelease-card-article");
+  if (!card) return;
+  card.removeAttribute("hidden");
+  card.classList.remove("hidden");
+}
+
+function hidePrereleaseCard(): void {
+  const card = document.getElementById("prerelease-card-article");
+  if (!card) return;
+  card.setAttribute("hidden", "");
+  card.classList.add("hidden");
+}
+
 async function renderDownloadQrCode(
   elementId: string,
   downloadUrl: string,
@@ -1865,6 +1884,7 @@ export async function fetchLatestRelease() {
     PLAY_STORE_URL,
     "Size pending",
   );
+  hidePrereleaseCard();
 
   try {
     const [releases, repositoryInfo] = await Promise.all([
@@ -1885,9 +1905,51 @@ export async function fetchLatestRelease() {
         formatReleaseAssetSize(getPrimaryReleaseAsset(latestRelease)?.size),
       );
     }
+
+    renderPrereleaseDownloadState(releases);
   } catch {
     // Silently fail — fallback release links and QR codes stay active.
   }
+}
+
+function renderPrereleaseDownloadState(
+  releases: GitHubRelease[] | null,
+): void {
+  if (!releases) return;
+
+  const preRelease = getPreRelease(releases);
+  if (!preRelease) {
+    hidePrereleaseCard();
+    return;
+  }
+
+  const downloadUrl = getReleaseDownloadUrl(preRelease);
+  showPrereleaseCard();
+
+  setTextContent(
+    "prerelease-version-tag",
+    `v${preRelease.tag_name} • Android APK`,
+  );
+  setTextContent(
+    "prerelease-size-tag",
+    formatReleaseAssetSize(getPrimaryReleaseAsset(preRelease)?.size),
+  );
+
+  bindDownloadButton("prerelease-download-btn", downloadUrl, true);
+
+  const releaseLink = document.getElementById("prerelease-release-link");
+  if (releaseLink) {
+    releaseLink.setAttribute(
+      "href",
+      getReleasePageUrl(preRelease.tag_name),
+    );
+  }
+
+  void renderDownloadQrCode(
+    "prerelease-qr-code",
+    downloadUrl,
+    `Scan to download Flick pre-release (v${preRelease.tag_name})`,
+  );
 }
 
 export async function initReleaseNotesPage() {
