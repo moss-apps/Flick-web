@@ -91,6 +91,51 @@ export function DownloadsPage(): string {
             </div>
           </article>
 
+          <article id="prerelease-card-article" class="hidden rounded-[1.6rem] border border-amber-500/15 bg-amber-500/[0.03] p-5 md:p-6">
+            <div class="grid gap-6 xl:grid-cols-[minmax(0,1fr)_15rem] xl:items-center">
+              <div class="min-w-0">
+                <div class="flex flex-col gap-3 border-b border-amber-500/10 pb-5 lg:flex-row lg:items-start lg:justify-between">
+                  <div class="min-w-0">
+                    <p class="text-[10px] font-bold tracking-[0.2em] uppercase text-amber-400/80">Pre-release</p>
+                    <h3 class="mt-2 text-xl md:text-2xl font-semibold tracking-tight text-white">Flick (Pre-release)</h3>
+                    <p class="mt-2 max-w-2xl text-sm text-gray-400 leading-relaxed">Bleeding-edge build for testers. Help us find errors and improvements before the next stable release. Stability not guaranteed.</p>
+                  </div>
+
+                  <div class="flex flex-wrap gap-2 lg:justify-end">
+                    <span id="prerelease-version-tag" class="rounded-full border border-amber-500/20 bg-amber-500/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-amber-200">
+                      Loading...
+                    </span>
+                    <span id="prerelease-size-tag" class="rounded-full border border-amber-500/10 bg-black/20 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-amber-100/70">
+                      Size pending
+                    </span>
+                  </div>
+                </div>
+
+                <p class="mt-5 text-sm text-gray-300 leading-relaxed">
+                  Scan to install the latest pre-release build, or tap the download button if you are already on your phone.
+                </p>
+
+                <div class="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                  <button id="prerelease-download-btn" class="inline-flex w-full items-center justify-center rounded-xl border border-amber-500/20 bg-amber-400 px-4 py-3 text-sm font-semibold tracking-tight text-black transition-all hover:bg-amber-300 active:scale-95 cursor-pointer sm:w-auto">
+                    Download Pre-release APK
+                  </button>
+                  <a id="prerelease-release-link" href="https://github.com/ultraelectronica/Flick/releases" target="_blank" rel="noopener" class="inline-flex w-full items-center justify-center rounded-xl border border-white/10 bg-white/[0.06] px-4 py-3 text-sm font-semibold tracking-tight text-white transition-all hover:bg-white/10 sm:w-auto">
+                    View pre-release notes
+                  </a>
+                </div>
+              </div>
+
+              <div class="mx-auto w-full max-w-[15rem] rounded-[1.45rem] border border-amber-500/10 bg-white p-4 shadow-[0_0_24px_rgba(251,191,36,0.12)]">
+                <div id="prerelease-qr-code" class="aspect-square w-full overflow-hidden rounded-[1.1rem] bg-[#F5F5F5] text-center text-[11px] font-medium text-gray-500">
+                  Generating QR...
+                </div>
+                <p class="mt-3 text-center text-[11px] font-medium uppercase tracking-[0.16em] text-gray-500">
+                  Scan on Android
+                </p>
+              </div>
+            </div>
+          </article>
+
           <article class="rounded-[1.6rem] border border-white/8 bg-white/[0.03] p-5 md:p-6">
             <div class="grid gap-6 xl:grid-cols-[minmax(0,1fr)_15rem] xl:items-center">
               <div class="min-w-0">
