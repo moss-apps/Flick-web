@@ -27,4 +27,4 @@ dist-ssr
 *.sln
 *.sw?
 
-.opencode
+graphify-out/
