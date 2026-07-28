@@ -1,8 +1,54 @@
-import { clientIp, isBlockedBot, rateLimited } from "../src/lib/protection";
-
 declare const process: { env: Record<string, string | undefined> };
 
 const SITE_ORIGIN = "https://flick-player.site";
+
+// ponytail: inlined from src/lib/protection — cross-dir import broke Vercel bundling.
+// Per-warm-instance state; swap for @upstash/ratelimit if cross-instance enforcement matters.
+const WINDOW_MS = 60_000;
+const MAX_HITS = 60;
+const SCRAPER_UA: readonly RegExp[] = [
+  /gptbot/i, /oai-searchbot/i, /claudebot/i, /claude-web/i, /anthropic-ai/i,
+  /ccbot/i, /google-extended/i, /bytespider/i, /facebookbot/i, /meta-externalagent/i,
+  /perplexitybot/i, /amazonbot/i, /semrush/i, /ahrefs/i, /dotbot/i, /petalbot/i,
+  /mj12bot/i, /yandex/i, /baiduspider/i, /scrapy/i, /\bcurl\b/i, /\bwget\b/i,
+  /python-requests/i, /python-urllib/i, /httpx/i, /node-fetch/i, /axios\/[\d.]+/i,
+  /go-http-client/i, /java\/[\d.]+/i, /okhttp/i, /headless/i, /phantom/i,
+  /selenium/i, /puppeteer/i, /webdriver/i, /chrome-lighthouse/i,
+];
+
+function isBlockedBot(userAgent: string): boolean {
+  if (userAgent.trim().length === 0) return true;
+  return SCRAPER_UA.some((re) => re.test(userAgent));
+}
+
+const buckets = new Map<string, number[]>();
+
+function rateLimited(key: string, now: number = Date.now()): boolean {
+  const cutoff = now - WINDOW_MS;
+  const existing = buckets.get(key);
+  let hits: number[] = [];
+  if (existing) {
+    let i = 0;
+    while (i < existing.length && existing[i] <= cutoff) i++;
+    hits = i === 0 ? existing : existing.slice(i);
+  }
+  if (hits.length >= MAX_HITS) {
+    buckets.set(key, hits);
+    return true;
+  }
+  hits.push(now);
+  buckets.set(key, hits);
+  return false;
+}
+
+function clientIp(headers: Record<string, string | undefined>): string {
+  const xff = headers["x-forwarded-for"];
+  if (xff) {
+    const first = xff.split(",")[0];
+    if (first) return first.trim();
+  }
+  return headers["x-real-ip"] ?? "unknown";
+}
 
 interface VercelRequest {
   query: Record<string, string | string[] | undefined>;
