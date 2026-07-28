@@ -1,12 +1,5 @@
 import "./style.css";
-import { Navbar, initMobileNavbar, initNavbarScroll } from "./components/navbar";
-import { Hero } from "./components/hero";
-import { Features } from "./components/features";
-import { Specs } from "./components/specs";
-import { Contributors } from "./components/contributors";
-import { Footer } from "./components/footer";
-import { DownloadsPage } from "./components/downloads-page";
-import { ReleaseNotesPage } from "./components/release-notes-page";
+import { initMobileNavbar, initNavbarScroll } from "./components/navbar";
 import {
   fetchLatestRelease,
   fetchLatestCommit,
@@ -18,29 +11,22 @@ import {
   initHeroAnimation,
   initNavbarAnimation,
 } from "./animations";
+import { renderPage, routeFromPath, routeMeta, SITE_ORIGIN, type AppRoute } from "./render";
 
-type AppRoute = "home" | "downloads" | "release-notes";
+const VALID_ROUTES = new Set(["/", "/downloads", "/release-notes"]);
 
 let releaseRefreshTimer: ReturnType<typeof setInterval> | null = null;
 
 function getCurrentRoute(): AppRoute {
-  const hash = window.location.hash.replace(/^#\/?/, "");
-  if (hash === "release-notes") return "release-notes";
-  if (hash === "downloads") return "downloads";
-  return "home";
+  return routeFromPath(window.location.pathname);
 }
 
-function renderHomePage(): string {
-  return `
-    ${Hero()}
-    ${Features()}
-    ${Specs()}
-    ${Contributors()}
-  `;
-}
-
-function renderDownloadsPage(): string {
-  return DownloadsPage();
+function navigate(path: string): void {
+  if (path === window.location.pathname) return;
+  if (!VALID_ROUTES.has(path)) return;
+  window.history.pushState({}, "", path);
+  window.scrollTo(0, 0);
+  renderApp();
 }
 
 function renderApp(): void {
@@ -53,18 +39,8 @@ function renderApp(): void {
   }
 
   const route = getCurrentRoute();
-  const pageMarkup =
-    route === "release-notes"
-      ? ReleaseNotesPage()
-      : route === "downloads"
-        ? renderDownloadsPage()
-        : renderHomePage();
-
-  app.innerHTML = `
-    ${Navbar(route)}
-    ${pageMarkup}
-    ${Footer(route)}
-  `;
+  applyMeta(route);
+  app.innerHTML = renderPage(route);
 
   initMobileNavbar();
   initNavbarScroll();
@@ -91,9 +67,27 @@ function renderApp(): void {
   fetchContributors();
 }
 
-window.addEventListener("hashchange", () => {
+window.addEventListener("popstate", () => {
   window.scrollTo(0, 0);
   renderApp();
+});
+
+document.addEventListener("click", (e) => {
+  const anchor = (e.target as HTMLElement | null)?.closest("a");
+  if (!anchor) return;
+  if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey) return;
+  const href = anchor.getAttribute("href");
+  if (!href) return;
+  let url: URL;
+  try {
+    url = new URL(href, window.location.origin);
+  } catch {
+    return;
+  }
+  if (url.origin !== window.location.origin) return;
+  if (!VALID_ROUTES.has(url.pathname)) return;
+  e.preventDefault();
+  navigate(url.pathname);
 });
 
 renderApp();
@@ -122,4 +116,26 @@ function initImageModal(): void {
   modal.addEventListener("click", (e) => {
     if (e.target === modal) modal.close();
   });
+}
+
+function applyMeta(route: AppRoute): void {
+  const meta = routeMeta(route);
+  const url = SITE_ORIGIN + meta.path;
+  document.title = meta.title;
+  setAttr('meta[name="description"]', "content", meta.description);
+  setAttr('meta[property="og:title"]', "content", meta.title);
+  setAttr('meta[property="og:description"]', "content", meta.description);
+  setAttr('meta[property="og:url"]', "content", url);
+  setAttr('meta[name="twitter:title"]', "content", meta.title);
+  setAttr('meta[name="twitter:description"]', "content", meta.description);
+  setAttr('link[rel="canonical"]', "href", url);
+}
+
+function setAttr(
+  selector: string,
+  attr: string,
+  value: string,
+): void {
+  const el = document.head.querySelector(selector);
+  if (el) el.setAttribute(attr, value);
 }
