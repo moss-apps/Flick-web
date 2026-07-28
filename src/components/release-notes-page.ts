@@ -17,7 +17,7 @@ export function ReleaseNotesPage(): string {
   <div class="max-w-7xl mx-auto px-6 lg:px-16 relative z-10">
     <div class="max-w-4xl" data-animate="fade-up">
       <a
-        href="#/"
+        href="/"
         class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] font-bold tracking-[0.24em] uppercase text-gray-400 transition-colors hover:text-white hover:bg-white/10"
       >
         Releases
