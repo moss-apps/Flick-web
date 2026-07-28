@@ -1,8 +1,13 @@
+import { clientIp, isBlockedBot, rateLimited } from "../src/lib/protection";
+
 declare const process: { env: Record<string, string | undefined> };
+
+const SITE_ORIGIN = "https://flick-player.site";
 
 interface VercelRequest {
   query: Record<string, string | string[] | undefined>;
   method?: string;
+  headers: Record<string, string | undefined>;
 }
 
 interface VercelResponse {
@@ -24,8 +29,21 @@ const ALLOWED_PATHS = [
 const ALLOWED_QS_KEYS = new Set(["page", "per_page"]);
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  res.setHeader("Access-Control-Allow-Origin", SITE_ORIGIN);
+  res.setHeader("Vary", "Origin");
+  res.setHeader("Access-Control-Allow-Methods", "GET");
+
   if (req.method !== "GET") {
     return res.status(405).json({ error: "Method not allowed" });
+  }
+
+  if (isBlockedBot(req.headers["user-agent"] ?? "")) {
+    return res.status(403).json({ error: "Forbidden" });
+  }
+
+  if (rateLimited(clientIp(req.headers))) {
+    res.setHeader("Retry-After", "60");
+    return res.status(429).json({ error: "Too many requests" });
   }
 
   const path = req.query.path as string | undefined;

@@ -13,19 +13,19 @@ function getRouteLinks(
 ): string {
   return `
     <a
-      href="#/"
+      href="/"
       class="inline-flex items-center justify-center rounded-full px-3 py-2 text-[11px] md:text-xs font-bold tracking-[0.18em] uppercase transition-all ${getRouteLinkClasses(currentRoute === "home")}"
     >
       Home
     </a>
     <a
-      href="#/release-notes"
+      href="/release-notes"
       class="inline-flex items-center justify-center rounded-full px-3 py-2 text-[11px] md:text-xs font-bold tracking-[0.18em] uppercase transition-all ${getRouteLinkClasses(currentRoute === "release-notes")}"
     >
       Releases
     </a>
     <a
-      href="#/downloads"
+      href="/downloads"
       class="inline-flex items-center justify-center rounded-full px-3 py-2 text-[11px] md:text-xs font-bold tracking-[0.18em] uppercase transition-all ${getRouteLinkClasses(currentRoute === "downloads")}"
     >
       Downloads
@@ -40,7 +40,7 @@ export function Navbar(
 <nav id="main-nav" class="fixed top-0 left-0 w-full px-4 sm:px-6 md:px-8 lg:px-16 py-4 md:py-6 z-50 transition-all duration-300">
   <div class="flex items-center justify-between gap-3">
     <div class="flex items-center gap-3 md:gap-5">
-      <a href="#/" class="flex items-center gap-3">
+      <a href="/" class="flex items-center gap-3">
         <img src="${flicklogo}" alt="Flick Logo" class="h-8 w-8 md:h-10 md:w-10 opacity-90">
         <span class="hidden sm:block text-white font-semibold tracking-wide">Flick</span>
       </a>
