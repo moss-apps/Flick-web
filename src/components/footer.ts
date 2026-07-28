@@ -10,7 +10,7 @@ export function Footer(
             <span>Back to Top</span>
           </button>`
       : `
-          <a href="#/" class="inline-flex justify-center items-center space-x-3 bg-transparent text-white border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition-all active:scale-95">
+          <a href="/" class="inline-flex justify-center items-center space-x-3 bg-transparent text-white border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition-all active:scale-95">
             <span>Back Home</span>
           </a>`;
 
@@ -54,8 +54,8 @@ export function Footer(
       </div>
 
       <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm font-medium text-gray-500">
-        <a href="#/downloads" class="hover:text-white transition-colors">Downloads</a>
-        <a href="#/release-notes" class="hover:text-white transition-colors">Release Notes</a>
+        <a href="/downloads" class="hover:text-white transition-colors">Downloads</a>
+        <a href="/release-notes" class="hover:text-white transition-colors">Release Notes</a>
         <a href="https://github.com/ultraelectronica/Flick/releases" target="_blank" rel="noopener" class="hover:text-white transition-colors">GitHub Releases</a>
         <a href="https://github.com/ultraelectronica/Flick/issues" target="_blank" rel="noopener" class="hover:text-white transition-colors">Issue Tracker</a>
         <a href="https://github.com/ultraelectronica/Flick/pulls" target="_blank" rel="noopener" class="hover:text-white transition-colors">Contribute</a>
