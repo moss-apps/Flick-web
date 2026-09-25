@@ -1,0 +1,28 @@
+{
+  "name": "Flick — Bit-Perfect Audiophile Music Player",
+  "short_name": "Flick",
+  "description": "Bit-perfect audiophile music player for Android with a custom Rust audio engine, UAC 2.0 external DAC support, and native DSD playback.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#101010",
+  "theme_color": "#101010",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

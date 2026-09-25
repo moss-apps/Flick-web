@@ -1,0 +1,4 @@
+dist
+node_modules
+graphify-out
+package-lock.json

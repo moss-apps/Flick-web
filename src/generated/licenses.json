@@ -1,0 +1,3360 @@
+{
+  "generatedAt": "2026-09-25T13:50:25.601Z",
+  "app": {
+    "name": "Flick Player",
+    "version": "0.22.0-beta.1+27",
+    "license": "MIT",
+    "url": "https://github.com/moss-apps/Flick",
+    "text": "MIT License\n\nCopyright (c) 2026 Flick Player Contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+  },
+  "native": [
+    {
+      "name": "Opus",
+      "license": "BSD-3-Clause",
+      "url": "https://opus-codec.org/",
+      "text": "Copyright 2001-2011 Xiph.Org, Skype Limited, Octasic,\n                    Jean-Marc Valin, Timothy B. Terriberry,\n                    CSIRO, Gregory Maxwell, Mark Borgerding,\n                    Erik de Castro Lopo\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions\nare met:\n\n- Redistributions of source code must retain the above copyright\nnotice, this list of conditions and the following disclaimer.\n\n- Redistributions in binary form must reproduce the above copyright\nnotice, this list of conditions and the following disclaimer in the\ndocumentation and/or other materials provided with the distribution.\n\n- Neither the name of Internet Society, IETF or IETF Trust, nor the\nnames of specific contributors, may be used to endorse or promote\nproducts derived from this software without specific prior written\npermission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\nLIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\nA PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER\nOR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,\nEXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,\nPROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR\nPROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF\nLIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING\nNEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\nSOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\nOpus is subject to the royalty-free patent licenses which are\nspecified at:\n\nXiph.Org Foundation:\nhttps://datatracker.ietf.org/ipr/1524/\n\nMicrosoft Corporation:\nhttps://datatracker.ietf.org/ipr/1914/\n\nBroadcom Corporation:\nhttps://datatracker.ietf.org/ipr/1526/"
+    },
+    {
+      "name": "WavPack",
+      "license": "BSD-3-Clause",
+      "url": "https://www.wavpack.com/",
+      "text": "Copyright (c) 1998 - 2024 David Bryant\n                          All rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n    * Redistributions of source code must retain the above copyright notice,\n      this list of conditions and the following disclaimer.\n    * Redistributions in binary form must reproduce the above copyright notice,\n      this list of conditions and the following disclaimer in the\n      documentation and/or other materials provided with the distribution.\n    * Neither the name of Conifer Software nor the names of its contributors\n      may be used to endorse or promote products derived from this software\n      without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\nARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR\nANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
+    },
+    {
+      "name": "SoundTouch",
+      "license": "LGPL-2.1",
+      "url": "https://www.surina.net/soundtouch/",
+      "text": "GNU LESSER GENERAL PUBLIC LICENSE\n\t\t       Version 2.1, February 1999\n\n Copyright (C) 1991, 1999 Free Software Foundation, Inc.\n 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA\n Everyone is permitted to copy and distribute verbatim copies\n of this license document, but changing it is not allowed.\n\n[This is the first released version of the Lesser GPL.  It also counts\n as the successor of the GNU Library Public License, version 2, hence\n the version number 2.1.]\n\n\t\t\t    Preamble\n\n  The licenses for most software are designed to take away your\nfreedom to share and change it.  By contrast, the GNU General Public\nLicenses are intended to guarantee your freedom to share and change\nfree software--to make sure the software is free for all its users.\n\n  This license, the Lesser General Public License, applies to some\nspecially designated software packages--typically libraries--of the\nFree Software Foundation and other authors who decide to use it.  You\ncan use it too, but we suggest you first think carefully about whether\nthis license or the ordinary General Public License is the better\nstrategy to use in any particular case, based on the explanations below.\n\n  When we speak of free software, we are referring to freedom of use,\nnot price.  Our General Public Licenses are designed to make sure that\nyou have the freedom to distribute copies of free software (and charge\nfor this service if you wish); that you receive source code or can get\nit if you want it; that you can change the software and use pieces of\nit in new free programs; and that you are informed that you can do\nthese things.\n\n  To protect your rights, we need to make restrictions that forbid\ndistributors to deny you these rights or to ask you to surrender these\nrights.  These restrictions translate to certain responsibilities for\nyou if you distribute copies of the library or if you modify it.\n\n  For example, if you distribute copies of the library, whether gratis\nor for a fee, you must give the recipients all the rights that we gave\nyou.  You must make sure that they, too, receive or can get the source\ncode.  If you link other code with the library, you must provide\ncomplete object files to the recipients, so that they can relink them\nwith the library after making changes to the library and recompiling\nit.  And you must show them these terms so they know their rights.\n\n  We protect your rights with a two-step method: (1) we copyright the\nlibrary, and (2) we offer you this license, which gives you legal\npermission to copy, distribute and/or modify the library.\n\n  To protect each distributor, we want to make it very clear that\nthere is no warranty for the free library.  Also, if the library is\nmodified by someone else and passed on, the recipients should know\nthat what they have is not the original version, so that the original\nauthor's reputation will not be affected by problems that might be\nintroduced by others.\n\f\n  Finally, software patents pose a constant threat to the existence of\nany free program.  We wish to make sure that a company cannot\neffectively restrict the users of a free program by obtaining a\nrestrictive license from a patent holder.  Therefore, we insist that\nany patent license obtained for a version of the library must be\nconsistent with the full freedom of use specified in this license.\n\n  Most GNU software, including some libraries, is covered by the\nordinary GNU General Public License.  This license, the GNU Lesser\nGeneral Public License, applies to certain designated libraries, and\nis quite different from the ordinary General Public License.  We use\nthis license for certain libraries in order to permit linking those\nlibraries into non-free programs.\n\n  When a program is linked with a library, whether statically or using\na shared library, the combination of the two is legally speaking a\ncombined work, a derivative of the original library.  The ordinary\nGeneral Public License therefore permits such linking only if the\nentire combination fits its criteria of freedom.  The Lesser General\nPublic License permits more lax criteria for linking other code with\nthe library.\n\n  We call this license the \"Lesser\" General Public License because it\ndoes Less to protect the user's freedom than the ordinary General\nPublic License.  It also provides other free software developers Less\nof an advantage over competing non-free programs.  These disadvantages\nare the reason we use the ordinary General Public License for many\nlibraries.  However, the Lesser license provides advantages in certain\nspecial circumstances.\n\n  For example, on rare occasions, there may be a special need to\nencourage the widest possible use of a certain library, so that it becomes\na de-facto standard.  To achieve this, non-free programs must be\nallowed to use the library.  A more frequent case is that a free\nlibrary does the same job as widely used non-free libraries.  In this\ncase, there is little to gain by limiting the free library to free\nsoftware only, so we use the Lesser General Public License.\n\n  In other cases, permission to use a particular library in non-free\nprograms enables a greater number of people to use a large body of\nfree software.  For example, permission to use the GNU C Library in\nnon-free programs enables many more people to use the whole GNU\noperating system, as well as its variant, the GNU/Linux operating\nsystem.\n\n  Although the Lesser General Public License is Less protective of the\nusers' freedom, it does ensure that the user of a program that is\nlinked with the Library has the freedom and the wherewithal to run\nthat program using a modified version of the Library.\n\n  The precise terms and conditions for copying, distribution and\nmodification follow.  Pay close attention to the difference between a\n\"work based on the library\" and a \"work that uses the library\".  The\nformer contains code derived from the library, whereas the latter must\nbe combined with the library in order to run.\n\f\n\t\t  GNU LESSER GENERAL PUBLIC LICENSE\n   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION\n\n  0. This License Agreement applies to any software library or other\nprogram which contains a notice placed by the copyright holder or\nother authorized party saying it may be distributed under the terms of\nthis Lesser General Public License (also called \"this License\").\nEach licensee is addressed as \"you\".\n\n  A \"library\" means a collection of software functions and/or data\nprepared so as to be conveniently linked with application programs\n(which use some of those functions and data) to form executables.\n\n  The \"Library\", below, refers to any such software library or work\nwhich has been distributed under these terms.  A \"work based on the\nLibrary\" means either the Library or any derivative work under\ncopyright law: that is to say, a work containing the Library or a\nportion of it, either verbatim or with modifications and/or translated\nstraightforwardly into another language.  (Hereinafter, translation is\nincluded without limitation in the term \"modification\".)\n\n  \"Source code\" for a work means the preferred form of the work for\nmaking modifications to it.  For a library, complete source code means\nall the source code for all modules it contains, plus any associated\ninterface definition files, plus the scripts used to control compilation\nand installation of the library.\n\n  Activities other than copying, distribution and modification are not\ncovered by this License; they are outside its scope.  The act of\nrunning a program using the Library is not restricted, and output from\nsuch a program is covered only if its contents constitute a work based\non the Library (independent of the use of the Library in a tool for\nwriting it).  Whether that is true depends on what the Library does\nand what the program that uses the Library does.\n  \n  1. You may copy and distribute verbatim copies of the Library's\ncomplete source code as you receive it, in any medium, provided that\nyou conspicuously and appropriately publish on each copy an\nappropriate copyright notice and disclaimer of warranty; keep intact\nall the notices that refer to this License and to the absence of any\nwarranty; and distribute a copy of this License along with the\nLibrary.\n\n  You may charge a fee for the physical act of transferring a copy,\nand you may at your option offer warranty protection in exchange for a\nfee.\n\f\n  2. You may modify your copy or copies of the Library or any portion\nof it, thus forming a work based on the Library, and copy and\ndistribute such modifications or work under the terms of Section 1\nabove, provided that you also meet all of these conditions:\n\n    a) The modified work must itself be a software library.\n\n    b) You must cause the files modified to carry prominent notices\n    stating that you changed the files and the date of any change.\n\n    c) You must cause the whole of the work to be licensed at no\n    charge to all third parties under the terms of this License.\n\n    d) If a facility in the modified Library refers to a function or a\n    table of data to be supplied by an application program that uses\n    the facility, other than as an argument passed when the facility\n    is invoked, then you must make a good faith effort to ensure that,\n    in the event an application does not supply such function or\n    table, the facility still operates, and performs whatever part of\n    its purpose remains meaningful.\n\n    (For example, a function in a library to compute square roots has\n    a purpose that is entirely well-defined independent of the\n    application.  Therefore, Subsection 2d requires that any\n    application-supplied function or table used by this function must\n    be optional: if the application does not supply it, the square\n    root function must still compute square roots.)\n\nThese requirements apply to the modified work as a whole.  If\nidentifiable sections of that work are not derived from the Library,\nand can be reasonably considered independent and separate works in\nthemselves, then this License, and its terms, do not apply to those\nsections when you distribute them as separate works.  But when you\ndistribute the same sections as part of a whole which is a work based\non the Library, the distribution of the whole must be on the terms of\nthis License, whose permissions for other licensees extend to the\nentire whole, and thus to each and every part regardless of who wrote\nit.\n\nThus, it is not the intent of this section to claim rights or contest\nyour rights to work written entirely by you; rather, the intent is to\nexercise the right to control the distribution of derivative or\ncollective works based on the Library.\n\nIn addition, mere aggregation of another work not based on the Library\nwith the Library (or with a work based on the Library) on a volume of\na storage or distribution medium does not bring the other work under\nthe scope of this License.\n\n  3. You may opt to apply the terms of the ordinary GNU General Public\nLicense instead of this License to a given copy of the Library.  To do\nthis, you must alter all the notices that refer to this License, so\nthat they refer to the ordinary GNU General Public License, version 2,\ninstead of to this License.  (If a newer version than version 2 of the\nordinary GNU General Public License has appeared, then you can specify\nthat version instead if you wish.)  Do not make any other change in\nthese notices.\n\f\n  Once this change is made in a given copy, it is irreversible for\nthat copy, so the ordinary GNU General Public License applies to all\nsubsequent copies and derivative works made from that copy.\n\n  This option is useful when you wish to copy part of the code of\nthe Library into a program that is not a library.\n\n  4. You may copy and distribute the Library (or a portion or\nderivative of it, under Section 2) in object code or executable form\nunder the terms of Sections 1 and 2 above provided that you accompany\nit with the complete corresponding machine-readable source code, which\nmust be distributed under the terms of Sections 1 and 2 above on a\nmedium customarily used for software interchange.\n\n  If distribution of object code is made by offering access to copy\nfrom a designated place, then offering equivalent access to copy the\nsource code from the same place satisfies the requirement to\ndistribute the source code, even though third parties are not\ncompelled to copy the source along with the object code.\n\n  5. A program that contains no derivative of any portion of the\nLibrary, but is designed to work with the Library by being compiled or\nlinked with it, is called a \"work that uses the Library\".  Such a\nwork, in isolation, is not a derivative work of the Library, and\ntherefore falls outside the scope of this License.\n\n  However, linking a \"work that uses the Library\" with the Library\ncreates an executable that is a derivative of the Library (because it\ncontains portions of the Library), rather than a \"work that uses the\nlibrary\".  The executable is therefore covered by this License.\nSection 6 states terms for distribution of such executables.\n\n  When a \"work that uses the Library\" uses material from a header file\nthat is part of the Library, the object code for the work may be a\nderivative work of the Library even though the source code is not.\nWhether this is true is especially significant if the work can be\nlinked without the Library, or if the work is itself a library.  The\nthreshold for this to be true is not precisely defined by law.\n\n  If such an object file uses only numerical parameters, data\nstructure layouts and accessors, and small macros and small inline\nfunctions (ten lines or less in length), then the use of the object\nfile is unrestricted, regardless of whether it is legally a derivative\nwork.  (Executables containing this object code plus portions of the\nLibrary will still fall under Section 6.)\n\n  Otherwise, if the work is a derivative of the Library, you may\ndistribute the object code for the work under the terms of Section 6.\nAny executables containing that work also fall under Section 6,\nwhether or not they are linked directly with the Library itself.\n\f\n  6. As an exception to the Sections above, you may also combine or\nlink a \"work that uses the Library\" with the Library to produce a\nwork containing portions of the Library, and distribute that work\nunder terms of your choice, provided that the terms permit\nmodification of the work for the customer's own use and reverse\nengineering for debugging such modifications.\n\n  You must give prominent notice with each copy of the work that the\nLibrary is used in it and that the Library and its use are covered by\nthis License.  You must supply a copy of this License.  If the work\nduring execution displays copyright notices, you must include the\ncopyright notice for the Library among them, as well as a reference\ndirecting the user to the copy of this License.  Also, you must do one\nof these things:\n\n    a) Accompany the work with the complete corresponding\n    machine-readable source code for the Library including whatever\n    changes were used in the work (which must be distributed under\n    Sections 1 and 2 above); and, if the work is an executable linked\n    with the Library, with the complete machine-readable \"work that\n    uses the Library\", as object code and/or source code, so that the\n    user can modify the Library and then relink to produce a modified\n    executable containing the modified Library.  (It is understood\n    that the user who changes the contents of definitions files in the\n    Library will not necessarily be able to recompile the application\n    to use the modified definitions.)\n\n    b) Use a suitable shared library mechanism for linking with the\n    Library.  A suitable mechanism is one that (1) uses at run time a\n    copy of the library already present on the user's computer system,\n    rather than copying library functions into the executable, and (2)\n    will operate properly with a modified version of the library, if\n    the user installs one, as long as the modified version is\n    interface-compatible with the version that the work was made with.\n\n    c) Accompany the work with a written offer, valid for at\n    least three years, to give the same user the materials\n    specified in Subsection 6a, above, for a charge no more\n    than the cost of performing this distribution.\n\n    d) If distribution of the work is made by offering access to copy\n    from a designated place, offer equivalent access to copy the above\n    specified materials from the same place.\n\n    e) Verify that the user has already received a copy of these\n    materials or that you have already sent this user a copy.\n\n  For an executable, the required form of the \"work that uses the\nLibrary\" must include any data and utility programs needed for\nreproducing the executable from it.  However, as a special exception,\nthe materials to be distributed need not include anything that is\nnormally distributed (in either source or binary form) with the major\ncomponents (compiler, kernel, and so on) of the operating system on\nwhich the executable runs, unless that component itself accompanies\nthe executable.\n\n  It may happen that this requirement contradicts the license\nrestrictions of other proprietary libraries that do not normally\naccompany the operating system.  Such a contradiction means you cannot\nuse both them and the Library together in an executable that you\ndistribute.\n\f\n  7. You may place library facilities that are a work based on the\nLibrary side-by-side in a single library together with other library\nfacilities not covered by this License, and distribute such a combined\nlibrary, provided that the separate distribution of the work based on\nthe Library and of the other library facilities is otherwise\npermitted, and provided that you do these two things:\n\n    a) Accompany the combined library with a copy of the same work\n    based on the Library, uncombined with any other library\n    facilities.  This must be distributed under the terms of the\n    Sections above.\n\n    b) Give prominent notice with the combined library of the fact\n    that part of it is a work based on the Library, and explaining\n    where to find the accompanying uncombined form of the same work.\n\n  8. You may not copy, modify, sublicense, link with, or distribute\nthe Library except as expressly provided under this License.  Any\nattempt otherwise to copy, modify, sublicense, link with, or\ndistribute the Library is void, and will automatically terminate your\nrights under this License.  However, parties who have received copies,\nor rights, from you under this License will not have their licenses\nterminated so long as such parties remain in full compliance.\n\n  9. You are not required to accept this License, since you have not\nsigned it.  However, nothing else grants you permission to modify or\ndistribute the Library or its derivative works.  These actions are\nprohibited by law if you do not accept this License.  Therefore, by\nmodifying or distributing the Library (or any work based on the\nLibrary), you indicate your acceptance of this License to do so, and\nall its terms and conditions for copying, distributing or modifying\nthe Library or works based on it.\n\n  10. Each time you redistribute the Library (or any work based on the\nLibrary), the recipient automatically receives a license from the\noriginal licensor to copy, distribute, link with or modify the Library\nsubject to these terms and conditions.  You may not impose any further\nrestrictions on the recipients' exercise of the rights granted herein.\nYou are not responsible for enforcing compliance by third parties with\nthis License.\n\f\n  11. If, as a consequence of a court judgment or allegation of patent\ninfringement or for any other reason (not limited to patent issues),\nconditions are imposed on you (whether by court order, agreement or\notherwise) that contradict the conditions of this License, they do not\nexcuse you from the conditions of this License.  If you cannot\ndistribute so as to satisfy simultaneously your obligations under this\nLicense and any other pertinent obligations, then as a consequence you\nmay not distribute the Library at all.  For example, if a patent\nlicense would not permit royalty-free redistribution of the Library by\nall those who receive copies directly or indirectly through you, then\nthe only way you could satisfy both it and this License would be to\nrefrain entirely from distribution of the Library.\n\nIf any portion of this section is held invalid or unenforceable under any\nparticular circumstance, the balance of the section is intended to apply,\nand the section as a whole is intended to apply in other circumstances.\n\nIt is not the purpose of this section to induce you to infringe any\npatents or other property right claims or to contest validity of any\nsuch claims; this section has the sole purpose of protecting the\nintegrity of the free software distribution system which is\nimplemented by public license practices.  Many people have made\ngenerous contributions to the wide range of software distributed\nthrough that system in reliance on consistent application of that\nsystem; it is up to the author/donor to decide if he or she is willing\nto distribute software through any other system and a licensee cannot\nimpose that choice.\n\nThis section is intended to make thoroughly clear what is believed to\nbe a consequence of the rest of this License.\n\n  12. If the distribution and/or use of the Library is restricted in\ncertain countries either by patents or by copyrighted interfaces, the\noriginal copyright holder who places the Library under this License may add\nan explicit geographical distribution limitation excluding those countries,\nso that distribution is permitted only in or among countries not thus\nexcluded.  In such case, this License incorporates the limitation as if\nwritten in the body of this License.\n\n  13. The Free Software Foundation may publish revised and/or new\nversions of the Lesser General Public License from time to time.\nSuch new versions will be similar in spirit to the present version,\nbut may differ in detail to address new problems or concerns.\n\nEach version is given a distinguishing version number.  If the Library\nspecifies a version number of this License which applies to it and\n\"any later version\", you have the option of following the terms and\nconditions either of that version or of any later version published by\nthe Free Software Foundation.  If the Library does not specify a\nlicense version number, you may choose any version ever published by\nthe Free Software Foundation.\n\f\n  14. If you wish to incorporate parts of the Library into other free\nprograms whose distribution conditions are incompatible with these,\nwrite to the author to ask for permission.  For software which is\ncopyrighted by the Free Software Foundation, write to the Free\nSoftware Foundation; we sometimes make exceptions for this.  Our\ndecision will be guided by the two goals of preserving the free status\nof all derivatives of our free software and of promoting the sharing\nand reuse of software generally.\n\n\t\t\t    NO WARRANTY\n\n  15. BECAUSE THE LIBRARY IS LICENSED FREE OF CHARGE, THERE IS NO\nWARRANTY FOR THE LIBRARY, TO THE EXTENT PERMITTED BY APPLICABLE LAW.\nEXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR\nOTHER PARTIES PROVIDE THE LIBRARY \"AS IS\" WITHOUT WARRANTY OF ANY\nKIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR\nPURPOSE.  THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE\nLIBRARY IS WITH YOU.  SHOULD THE LIBRARY PROVE DEFECTIVE, YOU ASSUME\nTHE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.\n\n  16. IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN\nWRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY\nAND/OR REDISTRIBUTE THE LIBRARY AS PERMITTED ABOVE, BE LIABLE TO YOU\nFOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR\nCONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE\nLIBRARY (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING\nRENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A\nFAILURE OF THE LIBRARY TO OPERATE WITH ANY OTHER SOFTWARE), EVEN IF\nSUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH\nDAMAGES.\n\n\t\t     END OF TERMS AND CONDITIONS"
+    },
+    {
+      "name": "cpal (vendored)",
+      "license": "Apache-2.0",
+      "url": "https://github.com/RustAudio/cpal",
+      "text": "Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial ownership of such entity.\n\n      \"You\" (or \"Your\") shall mean an individual or Legal Entity\n      exercising permissions granted by this License.\n\n      \"Source\" form shall mean the preferred form for making modifications,\n      including but not limited to software source code, documentation\n      source, and configuration files.\n\n      \"Object\" form shall mean any form resulting from mechanical\n      transformation or translation of a Source form, including but\n      not limited to compiled object code, generated documentation,\n      and conversions to other media types.\n\n      \"Work\" shall mean the work of authorship, whether in Source or\n      Object form, made available under the License, as indicated by a\n      copyright notice that is included in or attached to the work\n      (an example is provided in the Appendix below).\n\n      \"Derivative Works\" shall mean any work, whether in Source or Object\n      form, that is based on (or derived from) the Work and for which the\n      editorial revisions, annotations, elaborations, or other modifications\n      represent, as a whole, an original work of authorship. For the purposes\n      of this License, Derivative Works shall not include works that remain\n      separable from, or merely link (or bind by name) to the interfaces of,\n      the Work and Derivative Works thereof.\n\n      \"Contribution\" shall mean any work of authorship, including\n      the original version of the Work and any modifications or additions\n      to that Work or Derivative Works thereof, that is intentionally\n      submitted to Licensor for inclusion in the Work by the copyright owner\n      or by an individual or Legal Entity authorized to submit on behalf of\n      the copyright owner. For the purposes of this definition, \"submitted\"\n      means any form of electronic, verbal, or written communication sent\n      to the Licensor or its representatives, including but not limited to\n      communication on electronic mailing lists, source code control systems,\n      and issue tracking systems that are managed by, or on behalf of, the\n      Licensor for the purpose of discussing and improving the Work, but\n      excluding communication that is conspicuously marked or otherwise\n      designated in writing by the copyright owner as \"Not a Contribution.\"\n\n      \"Contributor\" shall mean Licensor and any individual or Legal Entity\n      on behalf of whom a Contribution has been received by Licensor and\n      subsequently incorporated within the Work.\n\n   2. Grant of Copyright License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      copyright license to reproduce, prepare Derivative Works of,\n      publicly display, publicly perform, sublicense, and distribute the\n      Work and such Derivative Works in Source or Object form.\n\n   3. Grant of Patent License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      (except as stated in this section) patent license to make, have made,\n      use, offer to sell, sell, import, and otherwise transfer the Work,\n      where such license applies only to those patent claims licensable\n      by such Contributor that are necessarily infringed by their\n      Contribution(s) alone or by combination of their Contribution(s)\n      with the Work to which such Contribution(s) was submitted. If You\n      institute patent litigation against any entity (including a\n      cross-claim or counterclaim in a lawsuit) alleging that the Work\n      or a Contribution incorporated within the Work constitutes direct\n      or contributory patent infringement, then any patent licenses\n      granted to You under this License for that Work shall terminate\n      as of the date such litigation is filed.\n\n   4. Redistribution. You may reproduce and distribute copies of the\n      Work or Derivative Works thereof in any medium, with or without\n      modifications, and in Source or Object form, provided that You\n      meet the following conditions:\n\n      (a) You must give any other recipients of the Work or\n          Derivative Works a copy of this License; and\n\n      (b) You must cause any modified files to carry prominent notices\n          stating that You changed the files; and\n\n      (c) You must retain, in the Source form of any Derivative Works\n          that You distribute, all copyright, patent, trademark, and\n          attribution notices from the Source form of the Work,\n          excluding those notices that do not pertain to any part of\n          the Derivative Works; and\n\n      (d) If the Work includes a \"NOTICE\" text file as part of its\n          distribution, then any Derivative Works that You distribute must\n          include a readable copy of the attribution notices contained\n          within such NOTICE file, excluding those notices that do not\n          pertain to any part of the Derivative Works, in at least one\n          of the following places: within a NOTICE text file distributed\n          as part of the Derivative Works; within the Source form or\n          documentation, if provided along with the Derivative Works; or,\n          within a display generated by the Derivative Works, if and\n          wherever such third-party notices normally appear. The contents\n          of the NOTICE file are for informational purposes only and\n          do not modify the License. You may add Your own attribution\n          notices within Derivative Works that You distribute, alongside\n          or as an addendum to the NOTICE text from the Work, provided\n          that such additional attribution notices cannot be construed\n          as modifying the License.\n\n      You may add Your own copyright statement to Your modifications and\n      may provide additional or different license terms and conditions\n      for use, reproduction, or distribution of Your modifications, or\n      for any such Derivative Works as a whole, provided Your use,\n      reproduction, and distribution of the Work otherwise complies with\n      the conditions stated in this License.\n\n   5. Submission of Contributions. Unless You explicitly state otherwise,\n      any Contribution intentionally submitted for inclusion in the Work\n      by You to the Licensor shall be under the terms and conditions of\n      this License, without any additional terms or conditions.\n      Notwithstanding the above, nothing herein shall supersede or modify\n      the terms of any separate license agreement you may have executed\n      with Licensor regarding such Contributions.\n\n   6. Trademarks. This License does not grant permission to use the trade\n      names, trademarks, service marks, or product names of the Licensor,\n      except as required for reasonable and customary use in describing the\n      origin of the Work and reproducing the content of the NOTICE file.\n\n   7. Disclaimer of Warranty. Unless required by applicable law or\n      agreed to in writing, Licensor provides the Work (and each\n      Contributor provides its Contributions) on an \"AS IS\" BASIS,\n      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\n      implied, including, without limitation, any warranties or conditions\n      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\n      PARTICULAR PURPOSE. You are solely responsible for determining the\n      appropriateness of using or redistributing the Work and assume any\n      risks associated with Your exercise of permissions under this License.\n\n   8. Limitation of Liability. In no event and under no legal theory,\n      whether in tort (including negligence), contract, or otherwise,\n      unless required by applicable law (such as deliberate and grossly\n      negligent acts) or agreed to in writing, shall any Contributor be\n      liable to You for damages, including any direct, indirect, special,\n      incidental, or consequential damages of any character arising as a\n      result of this License or out of the use or inability to use the\n      Work (including but not limited to damages for loss of goodwill,\n      work stoppage, computer failure or malfunction, or any and all\n      other commercial damages or losses), even if such Contributor\n      has been advised of the possibility of such damages.\n\n   9. Accepting Warranty or Additional Liability. While redistributing\n      the Work or Derivative Works thereof, You may choose to offer,\n      and charge a fee for, acceptance of support, warranty, indemnity,\n      or other liability obligations and/or rights consistent with this\n      License. However, in accepting such obligations, You may act only\n      on Your own behalf and on Your sole responsibility, not on behalf\n      of any other Contributor, and only if You agree to indemnify,\n      defend, and hold each Contributor harmless for any liability\n      incurred by, or claims asserted against, such Contributor by reason\n      of your accepting any such warranty or additional liability.\n\n   END OF TERMS AND CONDITIONS\n\n   APPENDIX: How to apply the Apache License to your work.\n\n      To apply the Apache License to your work, attach the following\n      boilerplate notice, with the fields enclosed by brackets \"[]\"\n      replaced with your own identifying information. (Don't include\n      the brackets!)  The text should be enclosed in the appropriate\n      comment syntax for the file format. We also recommend that a\n      file or class name and description of purpose be included on the\n      same \"printed page\" as the copyright notice for easier\n      identification within third-party archives.\n\n   Copyright [yyyy] [name of copyright owner]\n\n   Licensed under the Apache License, Version 2.0 (the \"License\");\n   you may not use this file except in compliance with the License.\n   You may obtain a copy of the License at\n\n       http://www.apache.org/licenses/LICENSE-2.0\n\n   Unless required by applicable law or agreed to in writing, software\n   distributed under the License is distributed on an \"AS IS\" BASIS,\n   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n   See the License for the specific language governing permissions and\n   limitations under the License."
+    },
+    {
+      "name": "Cargokit",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://github.com/irondash/cargokit",
+      "text": "/// This is copied from Cargokit (which is the official way to use it currently)\n/// Details: https://fzyzcjy.github.io/flutter_rust_bridge/manual/integrate/builtin\n\nCopyright 2022 Matej Knopp\n\n================================================================================\n\nMIT LICENSE\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies\nof the Software, and to permit persons to whom the Software is furnished to do\nso, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS\nFOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS\nOR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\nWHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR\nIN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n================================================================================\n\nAPACHE LICENSE, VERSION 2.0\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License."
+    }
+  ],
+  "dart": [
+    {
+      "name": "_fe_analyzer_shared",
+      "version": "88.0.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/_fe_analyzer_shared"
+    },
+    {
+      "name": "analysis_server_plugin",
+      "version": "0.3.4",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/analysis_server_plugin"
+    },
+    {
+      "name": "analyzer",
+      "version": "8.1.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/analyzer"
+    },
+    {
+      "name": "analyzer_buffer",
+      "version": "0.1.11",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/analyzer_buffer"
+    },
+    {
+      "name": "analyzer_plugin",
+      "version": "0.13.11",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/analyzer_plugin"
+    },
+    {
+      "name": "archive",
+      "version": "4.0.9",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/archive"
+    },
+    {
+      "name": "args",
+      "version": "2.7.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/args"
+    },
+    {
+      "name": "async",
+      "version": "2.13.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/async"
+    },
+    {
+      "name": "audio_session",
+      "version": "0.2.3",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/audio_session"
+    },
+    {
+      "name": "boolean_selector",
+      "version": "2.1.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/boolean_selector"
+    },
+    {
+      "name": "build",
+      "version": "4.0.6",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/build"
+    },
+    {
+      "name": "build_cli_annotations",
+      "version": "2.1.1",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/build_cli_annotations"
+    },
+    {
+      "name": "build_config",
+      "version": "1.2.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/build_config"
+    },
+    {
+      "name": "build_daemon",
+      "version": "4.1.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/build_daemon"
+    },
+    {
+      "name": "built_collection",
+      "version": "5.1.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/built_collection"
+    },
+    {
+      "name": "built_value",
+      "version": "8.12.5",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/built_value"
+    },
+    {
+      "name": "characters",
+      "version": "1.4.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/characters"
+    },
+    {
+      "name": "checked_yaml",
+      "version": "2.0.4",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/checked_yaml"
+    },
+    {
+      "name": "cli_config",
+      "version": "0.2.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/cli_config"
+    },
+    {
+      "name": "cli_util",
+      "version": "0.4.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/cli_util"
+    },
+    {
+      "name": "clock",
+      "version": "1.1.2",
+      "license": "Apache-2.0",
+      "url": "https://pub.dev/packages/clock"
+    },
+    {
+      "name": "code_assets",
+      "version": "1.0.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/code_assets"
+    },
+    {
+      "name": "code_builder",
+      "version": "4.11.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/code_builder"
+    },
+    {
+      "name": "collection",
+      "version": "1.19.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/collection"
+    },
+    {
+      "name": "connectivity_plus",
+      "version": "7.1.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/connectivity_plus"
+    },
+    {
+      "name": "connectivity_plus_platform_interface",
+      "version": "2.1.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/connectivity_plus_platform_interface"
+    },
+    {
+      "name": "convert",
+      "version": "3.1.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/convert"
+    },
+    {
+      "name": "coverage",
+      "version": "1.15.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/coverage"
+    },
+    {
+      "name": "cross_file",
+      "version": "0.3.5+2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/cross_file"
+    },
+    {
+      "name": "crypto",
+      "version": "3.0.7",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/crypto"
+    },
+    {
+      "name": "csslib",
+      "version": "1.0.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/csslib"
+    },
+    {
+      "name": "cupertino_icons",
+      "version": "1.0.9",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/cupertino_icons"
+    },
+    {
+      "name": "dart_style",
+      "version": "3.1.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/dart_style"
+    },
+    {
+      "name": "dartx",
+      "version": "1.2.0",
+      "license": "Apache-2.0",
+      "url": "https://pub.dev/packages/dartx"
+    },
+    {
+      "name": "dbus",
+      "version": "0.7.12",
+      "license": "GPL-3.0 AND MPL-2.0",
+      "url": "https://pub.dev/packages/dbus"
+    },
+    {
+      "name": "equatable",
+      "version": "2.0.8",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/equatable"
+    },
+    {
+      "name": "fading_marquee_widget",
+      "version": "1.2.0",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/fading_marquee_widget"
+    },
+    {
+      "name": "fake_async",
+      "version": "1.3.3",
+      "license": "Apache-2.0",
+      "url": "https://pub.dev/packages/fake_async"
+    },
+    {
+      "name": "ffi",
+      "version": "2.2.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/ffi"
+    },
+    {
+      "name": "file",
+      "version": "7.0.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/file"
+    },
+    {
+      "name": "file_picker",
+      "version": "11.0.2",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/file_picker"
+    },
+    {
+      "name": "file_selector_linux",
+      "version": "0.9.4",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/file_selector_linux"
+    },
+    {
+      "name": "file_selector_macos",
+      "version": "0.9.5",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/file_selector_macos"
+    },
+    {
+      "name": "file_selector_platform_interface",
+      "version": "2.7.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/file_selector_platform_interface"
+    },
+    {
+      "name": "file_selector_windows",
+      "version": "0.9.3+5",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/file_selector_windows"
+    },
+    {
+      "name": "fixnum",
+      "version": "1.1.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/fixnum"
+    },
+    {
+      "name": "fl_chart",
+      "version": "1.2.0",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/fl_chart"
+    },
+    {
+      "name": "flutter_cache_manager",
+      "version": "3.4.1",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/flutter_cache_manager"
+    },
+    {
+      "name": "flutter_displaymode",
+      "version": "0.7.0",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/flutter_displaymode"
+    },
+    {
+      "name": "flutter_markdown",
+      "version": "0.7.7+1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/flutter_markdown"
+    },
+    {
+      "name": "flutter_plugin_android_lifecycle",
+      "version": "2.0.34",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/flutter_plugin_android_lifecycle"
+    },
+    {
+      "name": "flutter_riverpod",
+      "version": "3.1.0",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/flutter_riverpod"
+    },
+    {
+      "name": "flutter_rust_bridge",
+      "version": "2.12.0",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/flutter_rust_bridge"
+    },
+    {
+      "name": "flutter_secure_storage",
+      "version": "10.0.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/flutter_secure_storage"
+    },
+    {
+      "name": "flutter_secure_storage_darwin",
+      "version": "0.2.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/flutter_secure_storage_darwin"
+    },
+    {
+      "name": "flutter_secure_storage_linux",
+      "version": "3.0.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/flutter_secure_storage_linux"
+    },
+    {
+      "name": "flutter_secure_storage_platform_interface",
+      "version": "2.0.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/flutter_secure_storage_platform_interface"
+    },
+    {
+      "name": "flutter_secure_storage_web",
+      "version": "2.1.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/flutter_secure_storage_web"
+    },
+    {
+      "name": "flutter_secure_storage_windows",
+      "version": "4.1.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/flutter_secure_storage_windows"
+    },
+    {
+      "name": "flutter_svg",
+      "version": "2.2.4",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/flutter_svg"
+    },
+    {
+      "name": "freezed_annotation",
+      "version": "3.1.0",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/freezed_annotation"
+    },
+    {
+      "name": "frontend_server_client",
+      "version": "4.0.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/frontend_server_client"
+    },
+    {
+      "name": "glob",
+      "version": "2.1.3",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/glob"
+    },
+    {
+      "name": "graphs",
+      "version": "2.3.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/graphs"
+    },
+    {
+      "name": "home_widget",
+      "version": "0.7.0+1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/home_widget"
+    },
+    {
+      "name": "hooks",
+      "version": "1.0.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/hooks"
+    },
+    {
+      "name": "html",
+      "version": "0.15.7",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/html"
+    },
+    {
+      "name": "http",
+      "version": "1.6.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/http"
+    },
+    {
+      "name": "http_multi_server",
+      "version": "3.2.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/http_multi_server"
+    },
+    {
+      "name": "http_parser",
+      "version": "4.1.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/http_parser"
+    },
+    {
+      "name": "image",
+      "version": "4.8.0",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/image"
+    },
+    {
+      "name": "image_picker",
+      "version": "1.2.2",
+      "license": "Apache-2.0 AND BSD-3-Clause",
+      "url": "https://pub.dev/packages/image_picker"
+    },
+    {
+      "name": "image_picker_android",
+      "version": "0.8.13+17",
+      "license": "Apache-2.0 AND BSD-3-Clause",
+      "url": "https://pub.dev/packages/image_picker_android"
+    },
+    {
+      "name": "image_picker_for_web",
+      "version": "3.1.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/image_picker_for_web"
+    },
+    {
+      "name": "image_picker_ios",
+      "version": "0.8.13+6",
+      "license": "Apache-2.0 AND BSD-3-Clause",
+      "url": "https://pub.dev/packages/image_picker_ios"
+    },
+    {
+      "name": "image_picker_linux",
+      "version": "0.2.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/image_picker_linux"
+    },
+    {
+      "name": "image_picker_macos",
+      "version": "0.2.2+1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/image_picker_macos"
+    },
+    {
+      "name": "image_picker_platform_interface",
+      "version": "2.11.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/image_picker_platform_interface"
+    },
+    {
+      "name": "image_picker_windows",
+      "version": "0.2.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/image_picker_windows"
+    },
+    {
+      "name": "in_app_update",
+      "version": "4.2.5",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/in_app_update"
+    },
+    {
+      "name": "io",
+      "version": "1.0.5",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/io"
+    },
+    {
+      "name": "isar_community",
+      "version": "3.3.2",
+      "license": "Apache-2.0",
+      "url": "https://pub.dev/packages/isar_community"
+    },
+    {
+      "name": "isar_community_flutter_libs",
+      "version": "3.3.2",
+      "license": "Apache-2.0",
+      "url": "https://pub.dev/packages/isar_community_flutter_libs"
+    },
+    {
+      "name": "js",
+      "version": "0.7.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/js"
+    },
+    {
+      "name": "json_annotation",
+      "version": "4.9.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/json_annotation"
+    },
+    {
+      "name": "just_audio",
+      "version": "0.10.5",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://pub.dev/packages/just_audio"
+    },
+    {
+      "name": "just_audio_platform_interface",
+      "version": "4.6.0",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/just_audio_platform_interface"
+    },
+    {
+      "name": "just_audio_web",
+      "version": "0.4.16",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/just_audio_web"
+    },
+    {
+      "name": "leak_tracker",
+      "version": "11.0.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/leak_tracker"
+    },
+    {
+      "name": "leak_tracker_flutter_testing",
+      "version": "3.0.10",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/leak_tracker_flutter_testing"
+    },
+    {
+      "name": "leak_tracker_testing",
+      "version": "3.0.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/leak_tracker_testing"
+    },
+    {
+      "name": "lints",
+      "version": "6.1.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/lints"
+    },
+    {
+      "name": "logging",
+      "version": "1.3.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/logging"
+    },
+    {
+      "name": "lucide_icons_flutter",
+      "version": "3.1.14+2",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/lucide_icons_flutter"
+    },
+    {
+      "name": "markdown",
+      "version": "7.3.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/markdown"
+    },
+    {
+      "name": "matcher",
+      "version": "0.12.20",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/matcher"
+    },
+    {
+      "name": "material_color_utilities",
+      "version": "0.13.0",
+      "license": "Apache-2.0",
+      "url": "https://pub.dev/packages/material_color_utilities"
+    },
+    {
+      "name": "meta",
+      "version": "1.19.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/meta"
+    },
+    {
+      "name": "mime",
+      "version": "2.0.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/mime"
+    },
+    {
+      "name": "mockito",
+      "version": "5.6.4",
+      "license": "Apache-2.0",
+      "url": "https://pub.dev/packages/mockito"
+    },
+    {
+      "name": "native_toolchain_c",
+      "version": "0.17.6",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/native_toolchain_c"
+    },
+    {
+      "name": "native_toolchain_rust",
+      "version": "1.0.3",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/native_toolchain_rust"
+    },
+    {
+      "name": "nm",
+      "version": "0.5.0",
+      "license": "GPL-3.0 AND MPL-2.0",
+      "url": "https://pub.dev/packages/nm"
+    },
+    {
+      "name": "node_preamble",
+      "version": "2.0.2",
+      "license": "MIT AND BSD-3-Clause",
+      "url": "https://pub.dev/packages/node_preamble"
+    },
+    {
+      "name": "objective_c",
+      "version": "9.3.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/objective_c"
+    },
+    {
+      "name": "package_config",
+      "version": "2.2.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/package_config"
+    },
+    {
+      "name": "path",
+      "version": "1.9.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/path"
+    },
+    {
+      "name": "path_parsing",
+      "version": "1.1.0",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/path_parsing"
+    },
+    {
+      "name": "path_provider",
+      "version": "2.1.5",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/path_provider"
+    },
+    {
+      "name": "path_provider_android",
+      "version": "2.2.23",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/path_provider_android"
+    },
+    {
+      "name": "path_provider_foundation",
+      "version": "2.6.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/path_provider_foundation"
+    },
+    {
+      "name": "path_provider_linux",
+      "version": "2.2.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/path_provider_linux"
+    },
+    {
+      "name": "path_provider_platform_interface",
+      "version": "2.1.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/path_provider_platform_interface"
+    },
+    {
+      "name": "path_provider_windows",
+      "version": "2.3.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/path_provider_windows"
+    },
+    {
+      "name": "permission_handler",
+      "version": "12.0.1",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/permission_handler"
+    },
+    {
+      "name": "permission_handler_android",
+      "version": "13.0.1",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/permission_handler_android"
+    },
+    {
+      "name": "permission_handler_apple",
+      "version": "9.4.7",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/permission_handler_apple"
+    },
+    {
+      "name": "permission_handler_html",
+      "version": "0.1.3+5",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/permission_handler_html"
+    },
+    {
+      "name": "permission_handler_platform_interface",
+      "version": "4.3.0",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/permission_handler_platform_interface"
+    },
+    {
+      "name": "permission_handler_windows",
+      "version": "0.2.1",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/permission_handler_windows"
+    },
+    {
+      "name": "petitparser",
+      "version": "7.0.2",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/petitparser"
+    },
+    {
+      "name": "platform",
+      "version": "3.1.6",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/platform"
+    },
+    {
+      "name": "plugin_platform_interface",
+      "version": "2.1.8",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/plugin_platform_interface"
+    },
+    {
+      "name": "pool",
+      "version": "1.5.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/pool"
+    },
+    {
+      "name": "posix",
+      "version": "6.5.0",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/posix"
+    },
+    {
+      "name": "process",
+      "version": "5.0.5",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/process"
+    },
+    {
+      "name": "pub_semver",
+      "version": "2.2.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/pub_semver"
+    },
+    {
+      "name": "pubspec_parse",
+      "version": "1.5.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/pubspec_parse"
+    },
+    {
+      "name": "restart_app",
+      "version": "1.8.3",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/restart_app"
+    },
+    {
+      "name": "rive",
+      "version": "0.14.5",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/rive"
+    },
+    {
+      "name": "rive_native",
+      "version": "0.1.5",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/rive_native"
+    },
+    {
+      "name": "riverpod",
+      "version": "3.1.0",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/riverpod"
+    },
+    {
+      "name": "riverpod_analyzer_utils",
+      "version": "1.0.0-dev.8",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/riverpod_analyzer_utils"
+    },
+    {
+      "name": "riverpod_annotation",
+      "version": "4.0.0",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/riverpod_annotation"
+    },
+    {
+      "name": "rxdart",
+      "version": "0.28.0",
+      "license": "Apache-2.0",
+      "url": "https://pub.dev/packages/rxdart"
+    },
+    {
+      "name": "share_plus",
+      "version": "10.1.4",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/share_plus"
+    },
+    {
+      "name": "share_plus_platform_interface",
+      "version": "5.0.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/share_plus_platform_interface"
+    },
+    {
+      "name": "shared_preferences",
+      "version": "2.5.5",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/shared_preferences"
+    },
+    {
+      "name": "shared_preferences_android",
+      "version": "2.4.23",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/shared_preferences_android"
+    },
+    {
+      "name": "shared_preferences_foundation",
+      "version": "2.5.6",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/shared_preferences_foundation"
+    },
+    {
+      "name": "shared_preferences_linux",
+      "version": "2.4.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/shared_preferences_linux"
+    },
+    {
+      "name": "shared_preferences_platform_interface",
+      "version": "2.4.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/shared_preferences_platform_interface"
+    },
+    {
+      "name": "shared_preferences_web",
+      "version": "2.4.3",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/shared_preferences_web"
+    },
+    {
+      "name": "shared_preferences_windows",
+      "version": "2.4.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/shared_preferences_windows"
+    },
+    {
+      "name": "shelf",
+      "version": "1.4.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/shelf"
+    },
+    {
+      "name": "shelf_packages_handler",
+      "version": "3.0.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/shelf_packages_handler"
+    },
+    {
+      "name": "shelf_static",
+      "version": "1.1.3",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/shelf_static"
+    },
+    {
+      "name": "shelf_web_socket",
+      "version": "3.0.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/shelf_web_socket"
+    },
+    {
+      "name": "skeletonizer",
+      "version": "2.1.3",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/skeletonizer"
+    },
+    {
+      "name": "source_gen",
+      "version": "4.2.3",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/source_gen"
+    },
+    {
+      "name": "source_helper",
+      "version": "1.3.8",
+      "license": "Apache-2.0",
+      "url": "https://pub.dev/packages/source_helper"
+    },
+    {
+      "name": "source_map_stack_trace",
+      "version": "2.1.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/source_map_stack_trace"
+    },
+    {
+      "name": "source_maps",
+      "version": "0.10.13",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/source_maps"
+    },
+    {
+      "name": "source_span",
+      "version": "1.10.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/source_span"
+    },
+    {
+      "name": "sqflite",
+      "version": "2.4.2",
+      "license": "BSD-2-Clause",
+      "url": "https://pub.dev/packages/sqflite"
+    },
+    {
+      "name": "sqflite_android",
+      "version": "2.4.2+3",
+      "license": "BSD-2-Clause",
+      "url": "https://pub.dev/packages/sqflite_android"
+    },
+    {
+      "name": "sqflite_common",
+      "version": "2.5.6",
+      "license": "BSD-2-Clause",
+      "url": "https://pub.dev/packages/sqflite_common"
+    },
+    {
+      "name": "sqflite_darwin",
+      "version": "2.4.2",
+      "license": "BSD-2-Clause",
+      "url": "https://pub.dev/packages/sqflite_darwin"
+    },
+    {
+      "name": "sqflite_platform_interface",
+      "version": "2.4.0",
+      "license": "BSD-2-Clause",
+      "url": "https://pub.dev/packages/sqflite_platform_interface"
+    },
+    {
+      "name": "stack_trace",
+      "version": "1.12.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/stack_trace"
+    },
+    {
+      "name": "state_notifier",
+      "version": "1.0.0",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/state_notifier"
+    },
+    {
+      "name": "stream_channel",
+      "version": "2.1.4",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/stream_channel"
+    },
+    {
+      "name": "stream_transform",
+      "version": "2.1.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/stream_transform"
+    },
+    {
+      "name": "string_scanner",
+      "version": "1.4.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/string_scanner"
+    },
+    {
+      "name": "sync_http",
+      "version": "0.3.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/sync_http"
+    },
+    {
+      "name": "synchronized",
+      "version": "3.4.0",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/synchronized"
+    },
+    {
+      "name": "term_glyph",
+      "version": "1.2.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/term_glyph"
+    },
+    {
+      "name": "test_api",
+      "version": "0.7.12",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/test_api"
+    },
+    {
+      "name": "test_core",
+      "version": "0.6.18",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/test_core"
+    },
+    {
+      "name": "time",
+      "version": "2.1.6",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/time"
+    },
+    {
+      "name": "toml",
+      "version": "0.18.0",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/toml"
+    },
+    {
+      "name": "typed_data",
+      "version": "1.4.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/typed_data"
+    },
+    {
+      "name": "url_launcher",
+      "version": "6.3.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/url_launcher"
+    },
+    {
+      "name": "url_launcher_android",
+      "version": "6.3.29",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/url_launcher_android"
+    },
+    {
+      "name": "url_launcher_ios",
+      "version": "6.4.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/url_launcher_ios"
+    },
+    {
+      "name": "url_launcher_linux",
+      "version": "3.2.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/url_launcher_linux"
+    },
+    {
+      "name": "url_launcher_macos",
+      "version": "3.2.5",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/url_launcher_macos"
+    },
+    {
+      "name": "url_launcher_platform_interface",
+      "version": "2.3.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/url_launcher_platform_interface"
+    },
+    {
+      "name": "url_launcher_web",
+      "version": "2.4.2",
+      "license": "Apache-2.0 AND BSD-3-Clause",
+      "url": "https://pub.dev/packages/url_launcher_web"
+    },
+    {
+      "name": "url_launcher_windows",
+      "version": "3.1.5",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/url_launcher_windows"
+    },
+    {
+      "name": "uuid",
+      "version": "4.5.3",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/uuid"
+    },
+    {
+      "name": "vector_graphics",
+      "version": "1.1.21",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/vector_graphics"
+    },
+    {
+      "name": "vector_graphics_codec",
+      "version": "1.1.13",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/vector_graphics_codec"
+    },
+    {
+      "name": "vector_graphics_compiler",
+      "version": "1.2.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/vector_graphics_compiler"
+    },
+    {
+      "name": "vector_math",
+      "version": "2.4.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/vector_math"
+    },
+    {
+      "name": "video_player",
+      "version": "2.14.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/video_player"
+    },
+    {
+      "name": "video_player_android",
+      "version": "2.12.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/video_player_android"
+    },
+    {
+      "name": "video_player_avfoundation",
+      "version": "2.12.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/video_player_avfoundation"
+    },
+    {
+      "name": "video_player_platform_interface",
+      "version": "6.9.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/video_player_platform_interface"
+    },
+    {
+      "name": "video_player_web",
+      "version": "2.4.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/video_player_web"
+    },
+    {
+      "name": "vm_service",
+      "version": "15.0.2",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/vm_service"
+    },
+    {
+      "name": "watcher",
+      "version": "1.2.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/watcher"
+    },
+    {
+      "name": "web",
+      "version": "1.1.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/web"
+    },
+    {
+      "name": "web_socket",
+      "version": "1.0.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/web_socket"
+    },
+    {
+      "name": "web_socket_channel",
+      "version": "3.0.3",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/web_socket_channel"
+    },
+    {
+      "name": "webdriver",
+      "version": "3.1.0",
+      "license": "Apache-2.0",
+      "url": "https://pub.dev/packages/webdriver"
+    },
+    {
+      "name": "webkit_inspection_protocol",
+      "version": "1.2.1",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/webkit_inspection_protocol"
+    },
+    {
+      "name": "win32",
+      "version": "5.15.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/win32"
+    },
+    {
+      "name": "xdg_directories",
+      "version": "1.1.0",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/xdg_directories"
+    },
+    {
+      "name": "xml",
+      "version": "6.6.1",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/xml"
+    },
+    {
+      "name": "xxh3",
+      "version": "1.2.0",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/xxh3"
+    },
+    {
+      "name": "yaml",
+      "version": "3.1.3",
+      "license": "MIT",
+      "url": "https://pub.dev/packages/yaml"
+    },
+    {
+      "name": "yaml_edit",
+      "version": "2.2.4",
+      "license": "BSD-3-Clause",
+      "url": "https://pub.dev/packages/yaml_edit"
+    }
+  ],
+  "rust": [
+    {
+      "name": "addr2line",
+      "version": "0.25.1",
+      "license": "Apache-2.0 OR MIT",
+      "url": "https://crates.io/crates/addr2line/0.25.1"
+    },
+    {
+      "name": "adler2",
+      "version": "2.0.1",
+      "license": "0BSD OR MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/adler2/2.0.1"
+    },
+    {
+      "name": "aead",
+      "version": "0.6.1",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/aead/0.6.1"
+    },
+    {
+      "name": "aes",
+      "version": "0.9.2",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/aes/0.9.2"
+    },
+    {
+      "name": "aes-gcm",
+      "version": "0.11.0",
+      "license": "Apache-2.0 OR MIT",
+      "url": "https://crates.io/crates/aes-gcm/0.11.0"
+    },
+    {
+      "name": "aho-corasick",
+      "version": "1.1.4",
+      "license": "Unlicense OR MIT",
+      "url": "https://crates.io/crates/aho-corasick/1.1.4"
+    },
+    {
+      "name": "allo-isolate",
+      "version": "0.1.27",
+      "license": "non-standard",
+      "url": "https://crates.io/crates/allo-isolate/0.1.27"
+    },
+    {
+      "name": "alsa",
+      "version": "0.9.1",
+      "license": "Apache-2.0/MIT",
+      "url": "https://crates.io/crates/alsa/0.9.1"
+    },
+    {
+      "name": "alsa-sys",
+      "version": "0.3.1",
+      "license": "MIT",
+      "url": "https://crates.io/crates/alsa-sys/0.3.1"
+    },
+    {
+      "name": "android_log-sys",
+      "version": "0.3.2",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/android_log-sys/0.3.2"
+    },
+    {
+      "name": "android_logger",
+      "version": "0.14.1",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/android_logger/0.14.1"
+    },
+    {
+      "name": "android_logger",
+      "version": "0.15.1",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/android_logger/0.15.1"
+    },
+    {
+      "name": "anyhow",
+      "version": "1.0.102",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/anyhow/1.0.102"
+    },
+    {
+      "name": "arrayvec",
+      "version": "0.7.6",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/arrayvec/0.7.6"
+    },
+    {
+      "name": "async-trait",
+      "version": "0.1.92",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/async-trait/0.1.92"
+    },
+    {
+      "name": "atomic",
+      "version": "0.5.3",
+      "license": "Apache-2.0/MIT",
+      "url": "https://crates.io/crates/atomic/0.5.3"
+    },
+    {
+      "name": "autocfg",
+      "version": "1.5.0",
+      "license": "Apache-2.0 OR MIT",
+      "url": "https://crates.io/crates/autocfg/1.5.0"
+    },
+    {
+      "name": "backtrace",
+      "version": "0.3.76",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/backtrace/0.3.76"
+    },
+    {
+      "name": "base64",
+      "version": "0.22.1",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/base64/0.22.1"
+    },
+    {
+      "name": "bindgen",
+      "version": "0.70.1",
+      "license": "BSD-3-Clause",
+      "url": "https://crates.io/crates/bindgen/0.70.1"
+    },
+    {
+      "name": "bindgen",
+      "version": "0.72.1",
+      "license": "BSD-3-Clause",
+      "url": "https://crates.io/crates/bindgen/0.72.1"
+    },
+    {
+      "name": "bitflags",
+      "version": "1.3.2",
+      "license": "MIT/Apache-2.0",
+      "url": "https://crates.io/crates/bitflags/1.3.2"
+    },
+    {
+      "name": "bitflags",
+      "version": "2.11.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/bitflags/2.11.0"
+    },
+    {
+      "name": "block-buffer",
+      "version": "0.10.4",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/block-buffer/0.10.4"
+    },
+    {
+      "name": "block-buffer",
+      "version": "0.12.1",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/block-buffer/0.12.1"
+    },
+    {
+      "name": "build-target",
+      "version": "0.4.0",
+      "license": "MIT",
+      "url": "https://crates.io/crates/build-target/0.4.0"
+    },
+    {
+      "name": "bumpalo",
+      "version": "3.20.2",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/bumpalo/3.20.2"
+    },
+    {
+      "name": "bytemuck",
+      "version": "1.25.0",
+      "license": "Zlib OR Apache-2.0 OR MIT",
+      "url": "https://crates.io/crates/bytemuck/1.25.0"
+    },
+    {
+      "name": "byteorder",
+      "version": "1.5.0",
+      "license": "Unlicense OR MIT",
+      "url": "https://crates.io/crates/byteorder/1.5.0"
+    },
+    {
+      "name": "bytes",
+      "version": "1.11.1",
+      "license": "MIT",
+      "url": "https://crates.io/crates/bytes/1.11.1"
+    },
+    {
+      "name": "cc",
+      "version": "1.2.56",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/cc/1.2.56"
+    },
+    {
+      "name": "ccm",
+      "version": "0.6.0-rc.3",
+      "license": "Apache-2.0 OR MIT",
+      "url": "https://crates.io/crates/ccm/0.6.0-rc.3"
+    },
+    {
+      "name": "cesu8",
+      "version": "1.1.0",
+      "license": "Apache-2.0/MIT",
+      "url": "https://crates.io/crates/cesu8/1.1.0"
+    },
+    {
+      "name": "cexpr",
+      "version": "0.6.0",
+      "license": "Apache-2.0/MIT",
+      "url": "https://crates.io/crates/cexpr/0.6.0"
+    },
+    {
+      "name": "cfg-if",
+      "version": "1.0.4",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/cfg-if/1.0.4"
+    },
+    {
+      "name": "cipher",
+      "version": "0.5.2",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/cipher/0.5.2"
+    },
+    {
+      "name": "clang-sys",
+      "version": "1.8.1",
+      "license": "Apache-2.0",
+      "url": "https://crates.io/crates/clang-sys/1.8.1"
+    },
+    {
+      "name": "cmac",
+      "version": "0.8.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/cmac/0.8.0"
+    },
+    {
+      "name": "cmov",
+      "version": "0.5.4",
+      "license": "Apache-2.0 OR MIT",
+      "url": "https://crates.io/crates/cmov/0.5.4"
+    },
+    {
+      "name": "combine",
+      "version": "4.6.7",
+      "license": "MIT",
+      "url": "https://crates.io/crates/combine/4.6.7"
+    },
+    {
+      "name": "console_error_panic_hook",
+      "version": "0.1.7",
+      "license": "Apache-2.0/MIT",
+      "url": "https://crates.io/crates/console_error_panic_hook/0.1.7"
+    },
+    {
+      "name": "const-oid",
+      "version": "0.10.2",
+      "license": "Apache-2.0 OR MIT",
+      "url": "https://crates.io/crates/const-oid/0.10.2"
+    },
+    {
+      "name": "core-foundation-sys",
+      "version": "0.8.7",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/core-foundation-sys/0.8.7"
+    },
+    {
+      "name": "coreaudio-rs",
+      "version": "0.11.3",
+      "license": "MIT/Apache-2.0",
+      "url": "https://crates.io/crates/coreaudio-rs/0.11.3"
+    },
+    {
+      "name": "coreaudio-sys",
+      "version": "0.2.17",
+      "license": "MIT",
+      "url": "https://crates.io/crates/coreaudio-sys/0.2.17"
+    },
+    {
+      "name": "cpubits",
+      "version": "0.1.1",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/cpubits/0.1.1"
+    },
+    {
+      "name": "cpufeatures",
+      "version": "0.3.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/cpufeatures/0.3.0"
+    },
+    {
+      "name": "crc32fast",
+      "version": "1.5.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/crc32fast/1.5.0"
+    },
+    {
+      "name": "crossbeam",
+      "version": "0.8.4",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/crossbeam/0.8.4"
+    },
+    {
+      "name": "crossbeam-channel",
+      "version": "0.5.15",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/crossbeam-channel/0.5.15"
+    },
+    {
+      "name": "crossbeam-deque",
+      "version": "0.8.6",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/crossbeam-deque/0.8.6"
+    },
+    {
+      "name": "crossbeam-epoch",
+      "version": "0.9.18",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/crossbeam-epoch/0.9.18"
+    },
+    {
+      "name": "crossbeam-queue",
+      "version": "0.3.12",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/crossbeam-queue/0.3.12"
+    },
+    {
+      "name": "crossbeam-utils",
+      "version": "0.8.21",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/crossbeam-utils/0.8.21"
+    },
+    {
+      "name": "crypto-common",
+      "version": "0.1.7",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/crypto-common/0.1.7"
+    },
+    {
+      "name": "crypto-common",
+      "version": "0.2.2",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/crypto-common/0.2.2"
+    },
+    {
+      "name": "ctr",
+      "version": "0.10.1",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/ctr/0.10.1"
+    },
+    {
+      "name": "ctutils",
+      "version": "0.4.2",
+      "license": "Apache-2.0 OR MIT",
+      "url": "https://crates.io/crates/ctutils/0.4.2"
+    },
+    {
+      "name": "dart-sys",
+      "version": "4.1.5",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/dart-sys/4.1.5"
+    },
+    {
+      "name": "dashmap",
+      "version": "5.5.3",
+      "license": "MIT",
+      "url": "https://crates.io/crates/dashmap/5.5.3"
+    },
+    {
+      "name": "dasp_sample",
+      "version": "0.11.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/dasp_sample/0.11.0"
+    },
+    {
+      "name": "data-encoding",
+      "version": "2.10.0",
+      "license": "MIT",
+      "url": "https://crates.io/crates/data-encoding/2.10.0"
+    },
+    {
+      "name": "dbl",
+      "version": "0.5.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/dbl/0.5.0"
+    },
+    {
+      "name": "delegate-attr",
+      "version": "0.3.0",
+      "license": "MIT",
+      "url": "https://crates.io/crates/delegate-attr/0.3.0"
+    },
+    {
+      "name": "dff-meta",
+      "version": "0.1.5",
+      "license": "MIT/Apache-2.0",
+      "url": "https://crates.io/crates/dff-meta/0.1.5"
+    },
+    {
+      "name": "digest",
+      "version": "0.10.7",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/digest/0.10.7"
+    },
+    {
+      "name": "digest",
+      "version": "0.11.3",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/digest/0.11.3"
+    },
+    {
+      "name": "displaydoc",
+      "version": "0.2.7",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/displaydoc/0.2.7"
+    },
+    {
+      "name": "dsf-meta",
+      "version": "0.2.7",
+      "license": "MIT/Apache-2.0",
+      "url": "https://crates.io/crates/dsf-meta/0.2.7"
+    },
+    {
+      "name": "either",
+      "version": "1.15.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/either/1.15.0"
+    },
+    {
+      "name": "encoding_rs",
+      "version": "0.8.35",
+      "license": "(Apache-2.0 OR MIT) AND BSD-3-Clause",
+      "url": "https://crates.io/crates/encoding_rs/0.8.35"
+    },
+    {
+      "name": "env_filter",
+      "version": "0.1.4",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/env_filter/0.1.4"
+    },
+    {
+      "name": "equivalent",
+      "version": "1.0.2",
+      "license": "Apache-2.0 OR MIT",
+      "url": "https://crates.io/crates/equivalent/1.0.2"
+    },
+    {
+      "name": "extended",
+      "version": "0.1.0",
+      "license": "MIT",
+      "url": "https://crates.io/crates/extended/0.1.0"
+    },
+    {
+      "name": "filetime",
+      "version": "0.2.27",
+      "license": "MIT/Apache-2.0",
+      "url": "https://crates.io/crates/filetime/0.2.27"
+    },
+    {
+      "name": "find-msvc-tools",
+      "version": "0.1.9",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/find-msvc-tools/0.1.9"
+    },
+    {
+      "name": "flate2",
+      "version": "1.1.9",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/flate2/1.1.9"
+    },
+    {
+      "name": "flutter_rust_bridge",
+      "version": "2.12.0",
+      "license": "MIT",
+      "url": "https://crates.io/crates/flutter_rust_bridge/2.12.0"
+    },
+    {
+      "name": "flutter_rust_bridge_macros",
+      "version": "2.12.0",
+      "license": "MIT",
+      "url": "https://crates.io/crates/flutter_rust_bridge_macros/2.12.0"
+    },
+    {
+      "name": "form_urlencoded",
+      "version": "1.2.2",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/form_urlencoded/1.2.2"
+    },
+    {
+      "name": "fsevent-sys",
+      "version": "4.1.0",
+      "license": "MIT",
+      "url": "https://crates.io/crates/fsevent-sys/4.1.0"
+    },
+    {
+      "name": "futures",
+      "version": "0.3.32",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/futures/0.3.32"
+    },
+    {
+      "name": "futures-channel",
+      "version": "0.3.32",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/futures-channel/0.3.32"
+    },
+    {
+      "name": "futures-core",
+      "version": "0.3.32",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/futures-core/0.3.32"
+    },
+    {
+      "name": "futures-executor",
+      "version": "0.3.32",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/futures-executor/0.3.32"
+    },
+    {
+      "name": "futures-io",
+      "version": "0.3.32",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/futures-io/0.3.32"
+    },
+    {
+      "name": "futures-macro",
+      "version": "0.3.32",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/futures-macro/0.3.32"
+    },
+    {
+      "name": "futures-sink",
+      "version": "0.3.32",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/futures-sink/0.3.32"
+    },
+    {
+      "name": "futures-task",
+      "version": "0.3.32",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/futures-task/0.3.32"
+    },
+    {
+      "name": "futures-util",
+      "version": "0.3.32",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/futures-util/0.3.32"
+    },
+    {
+      "name": "generic-array",
+      "version": "0.14.7",
+      "license": "MIT",
+      "url": "https://crates.io/crates/generic-array/0.14.7"
+    },
+    {
+      "name": "getrandom",
+      "version": "0.2.17",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/getrandom/0.2.17"
+    },
+    {
+      "name": "getrandom",
+      "version": "0.3.4",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/getrandom/0.3.4"
+    },
+    {
+      "name": "getrandom",
+      "version": "0.4.3",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/getrandom/0.4.3"
+    },
+    {
+      "name": "ghash",
+      "version": "0.6.0",
+      "license": "Apache-2.0 OR MIT",
+      "url": "https://crates.io/crates/ghash/0.6.0"
+    },
+    {
+      "name": "gimli",
+      "version": "0.32.3",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/gimli/0.32.3"
+    },
+    {
+      "name": "glob",
+      "version": "0.3.3",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/glob/0.3.3"
+    },
+    {
+      "name": "hashbrown",
+      "version": "0.14.5",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/hashbrown/0.14.5"
+    },
+    {
+      "name": "hashbrown",
+      "version": "0.16.1",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/hashbrown/0.16.1"
+    },
+    {
+      "name": "hermit-abi",
+      "version": "0.5.2",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/hermit-abi/0.5.2"
+    },
+    {
+      "name": "hex",
+      "version": "0.4.3",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/hex/0.4.3"
+    },
+    {
+      "name": "hmac",
+      "version": "0.13.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/hmac/0.13.0"
+    },
+    {
+      "name": "hound",
+      "version": "3.5.1",
+      "license": "Apache-2.0",
+      "url": "https://crates.io/crates/hound/3.5.1"
+    },
+    {
+      "name": "hybrid-array",
+      "version": "0.4.14",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/hybrid-array/0.4.14"
+    },
+    {
+      "name": "icu_collections",
+      "version": "2.2.0",
+      "license": "Unicode-3.0",
+      "url": "https://crates.io/crates/icu_collections/2.2.0"
+    },
+    {
+      "name": "icu_locale_core",
+      "version": "2.2.0",
+      "license": "Unicode-3.0",
+      "url": "https://crates.io/crates/icu_locale_core/2.2.0"
+    },
+    {
+      "name": "icu_normalizer",
+      "version": "2.2.0",
+      "license": "Unicode-3.0",
+      "url": "https://crates.io/crates/icu_normalizer/2.2.0"
+    },
+    {
+      "name": "icu_normalizer_data",
+      "version": "2.2.0",
+      "license": "Unicode-3.0",
+      "url": "https://crates.io/crates/icu_normalizer_data/2.2.0"
+    },
+    {
+      "name": "icu_properties",
+      "version": "2.2.0",
+      "license": "Unicode-3.0",
+      "url": "https://crates.io/crates/icu_properties/2.2.0"
+    },
+    {
+      "name": "icu_properties_data",
+      "version": "2.2.0",
+      "license": "Unicode-3.0",
+      "url": "https://crates.io/crates/icu_properties_data/2.2.0"
+    },
+    {
+      "name": "icu_provider",
+      "version": "2.2.0",
+      "license": "Unicode-3.0",
+      "url": "https://crates.io/crates/icu_provider/2.2.0"
+    },
+    {
+      "name": "id3",
+      "version": "1.16.4",
+      "license": "MIT",
+      "url": "https://crates.io/crates/id3/1.16.4"
+    },
+    {
+      "name": "idna",
+      "version": "1.1.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/idna/1.1.0"
+    },
+    {
+      "name": "idna_adapter",
+      "version": "1.2.2",
+      "license": "Apache-2.0 OR MIT",
+      "url": "https://crates.io/crates/idna_adapter/1.2.2"
+    },
+    {
+      "name": "indexmap",
+      "version": "2.13.0",
+      "license": "Apache-2.0 OR MIT",
+      "url": "https://crates.io/crates/indexmap/2.13.0"
+    },
+    {
+      "name": "inotify",
+      "version": "0.9.6",
+      "license": "ISC",
+      "url": "https://crates.io/crates/inotify/0.9.6"
+    },
+    {
+      "name": "inotify-sys",
+      "version": "0.1.5",
+      "license": "ISC",
+      "url": "https://crates.io/crates/inotify-sys/0.1.5"
+    },
+    {
+      "name": "inout",
+      "version": "0.2.2",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/inout/0.2.2"
+    },
+    {
+      "name": "itertools",
+      "version": "0.13.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/itertools/0.13.0"
+    },
+    {
+      "name": "itoa",
+      "version": "1.0.18",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/itoa/1.0.18"
+    },
+    {
+      "name": "jni",
+      "version": "0.21.1",
+      "license": "MIT/Apache-2.0",
+      "url": "https://crates.io/crates/jni/0.21.1"
+    },
+    {
+      "name": "jni-sys",
+      "version": "0.3.0",
+      "license": "MIT/Apache-2.0",
+      "url": "https://crates.io/crates/jni-sys/0.3.0"
+    },
+    {
+      "name": "jobserver",
+      "version": "0.1.34",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/jobserver/0.1.34"
+    },
+    {
+      "name": "js-sys",
+      "version": "0.3.88",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/js-sys/0.3.88"
+    },
+    {
+      "name": "jwalk",
+      "version": "0.8.1",
+      "license": "MIT",
+      "url": "https://crates.io/crates/jwalk/0.8.1"
+    },
+    {
+      "name": "kqueue",
+      "version": "1.1.1",
+      "license": "MIT",
+      "url": "https://crates.io/crates/kqueue/1.1.1"
+    },
+    {
+      "name": "kqueue-sys",
+      "version": "1.0.4",
+      "license": "MIT",
+      "url": "https://crates.io/crates/kqueue-sys/1.0.4"
+    },
+    {
+      "name": "lazy_static",
+      "version": "1.5.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/lazy_static/1.5.0"
+    },
+    {
+      "name": "libc",
+      "version": "0.2.182",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/libc/0.2.182"
+    },
+    {
+      "name": "libloading",
+      "version": "0.8.9",
+      "license": "ISC",
+      "url": "https://crates.io/crates/libloading/0.8.9"
+    },
+    {
+      "name": "libredox",
+      "version": "0.1.15",
+      "license": "MIT",
+      "url": "https://crates.io/crates/libredox/0.1.15"
+    },
+    {
+      "name": "libusb1-sys",
+      "version": "0.7.0",
+      "license": "MIT",
+      "url": "https://crates.io/crates/libusb1-sys/0.7.0"
+    },
+    {
+      "name": "litemap",
+      "version": "0.8.2",
+      "license": "Unicode-3.0",
+      "url": "https://crates.io/crates/litemap/0.8.2"
+    },
+    {
+      "name": "lock_api",
+      "version": "0.4.14",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/lock_api/0.4.14"
+    },
+    {
+      "name": "lofty",
+      "version": "0.21.1",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/lofty/0.21.1"
+    },
+    {
+      "name": "lofty_attr",
+      "version": "0.11.1",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/lofty_attr/0.11.1"
+    },
+    {
+      "name": "log",
+      "version": "0.4.29",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/log/0.4.29"
+    },
+    {
+      "name": "lz4_flex",
+      "version": "0.13.1",
+      "license": "MIT",
+      "url": "https://crates.io/crates/lz4_flex/0.13.1"
+    },
+    {
+      "name": "mach2",
+      "version": "0.4.3",
+      "license": "BSD-2-Clause OR MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/mach2/0.4.3"
+    },
+    {
+      "name": "matchers",
+      "version": "0.2.0",
+      "license": "MIT",
+      "url": "https://crates.io/crates/matchers/0.2.0"
+    },
+    {
+      "name": "md-5",
+      "version": "0.10.6",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/md-5/0.10.6"
+    },
+    {
+      "name": "md-5",
+      "version": "0.11.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/md-5/0.11.0"
+    },
+    {
+      "name": "md4",
+      "version": "0.11.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/md4/0.11.0"
+    },
+    {
+      "name": "memchr",
+      "version": "2.8.0",
+      "license": "Unlicense OR MIT",
+      "url": "https://crates.io/crates/memchr/2.8.0"
+    },
+    {
+      "name": "minimal-lexical",
+      "version": "0.2.1",
+      "license": "MIT/Apache-2.0",
+      "url": "https://crates.io/crates/minimal-lexical/0.2.1"
+    },
+    {
+      "name": "miniz_oxide",
+      "version": "0.8.9",
+      "license": "MIT OR Zlib OR Apache-2.0",
+      "url": "https://crates.io/crates/miniz_oxide/0.8.9"
+    },
+    {
+      "name": "mio",
+      "version": "0.8.11",
+      "license": "MIT",
+      "url": "https://crates.io/crates/mio/0.8.11"
+    },
+    {
+      "name": "mio",
+      "version": "1.1.1",
+      "license": "MIT",
+      "url": "https://crates.io/crates/mio/1.1.1"
+    },
+    {
+      "name": "ndk",
+      "version": "0.8.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/ndk/0.8.0"
+    },
+    {
+      "name": "ndk-context",
+      "version": "0.1.1",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/ndk-context/0.1.1"
+    },
+    {
+      "name": "ndk-sys",
+      "version": "0.5.0+25.2.9519653",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/ndk-sys/0.5.0+25.2.9519653"
+    },
+    {
+      "name": "nom",
+      "version": "7.1.3",
+      "license": "MIT",
+      "url": "https://crates.io/crates/nom/7.1.3"
+    },
+    {
+      "name": "notify",
+      "version": "6.1.1",
+      "license": "CC0-1.0",
+      "url": "https://crates.io/crates/notify/6.1.1"
+    },
+    {
+      "name": "nu-ansi-term",
+      "version": "0.50.3",
+      "license": "MIT",
+      "url": "https://crates.io/crates/nu-ansi-term/0.50.3"
+    },
+    {
+      "name": "num_cpus",
+      "version": "1.17.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/num_cpus/1.17.0"
+    },
+    {
+      "name": "num_enum",
+      "version": "0.7.5",
+      "license": "BSD-3-Clause OR MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/num_enum/0.7.5"
+    },
+    {
+      "name": "num_enum_derive",
+      "version": "0.7.5",
+      "license": "BSD-3-Clause OR MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/num_enum_derive/0.7.5"
+    },
+    {
+      "name": "num-complex",
+      "version": "0.4.6",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/num-complex/0.4.6"
+    },
+    {
+      "name": "num-derive",
+      "version": "0.4.2",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/num-derive/0.4.2"
+    },
+    {
+      "name": "num-integer",
+      "version": "0.1.46",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/num-integer/0.1.46"
+    },
+    {
+      "name": "num-traits",
+      "version": "0.2.19",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/num-traits/0.2.19"
+    },
+    {
+      "name": "object",
+      "version": "0.37.3",
+      "license": "Apache-2.0 OR MIT",
+      "url": "https://crates.io/crates/object/0.37.3"
+    },
+    {
+      "name": "oboe",
+      "version": "0.6.1",
+      "license": "Apache-2.0",
+      "url": "https://crates.io/crates/oboe/0.6.1"
+    },
+    {
+      "name": "oboe-sys",
+      "version": "0.6.1",
+      "license": "Apache-2.0",
+      "url": "https://crates.io/crates/oboe-sys/0.6.1"
+    },
+    {
+      "name": "ogg_pager",
+      "version": "0.6.1",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/ogg_pager/0.6.1"
+    },
+    {
+      "name": "once_cell",
+      "version": "1.21.3",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/once_cell/1.21.3"
+    },
+    {
+      "name": "oslog",
+      "version": "0.2.0",
+      "license": "MIT",
+      "url": "https://crates.io/crates/oslog/0.2.0"
+    },
+    {
+      "name": "parking_lot",
+      "version": "0.12.5",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/parking_lot/0.12.5"
+    },
+    {
+      "name": "parking_lot_core",
+      "version": "0.9.12",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/parking_lot_core/0.9.12"
+    },
+    {
+      "name": "paste",
+      "version": "1.0.15",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/paste/1.0.15"
+    },
+    {
+      "name": "pbkdf2",
+      "version": "0.13.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/pbkdf2/0.13.0"
+    },
+    {
+      "name": "percent-encoding",
+      "version": "2.3.2",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/percent-encoding/2.3.2"
+    },
+    {
+      "name": "pin-project-lite",
+      "version": "0.2.16",
+      "license": "Apache-2.0 OR MIT",
+      "url": "https://crates.io/crates/pin-project-lite/0.2.16"
+    },
+    {
+      "name": "pkg-config",
+      "version": "0.3.32",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/pkg-config/0.3.32"
+    },
+    {
+      "name": "plain",
+      "version": "0.2.3",
+      "license": "MIT/Apache-2.0",
+      "url": "https://crates.io/crates/plain/0.2.3"
+    },
+    {
+      "name": "polyval",
+      "version": "0.7.3",
+      "license": "Apache-2.0 OR MIT",
+      "url": "https://crates.io/crates/polyval/0.7.3"
+    },
+    {
+      "name": "portable-atomic",
+      "version": "1.13.1",
+      "license": "Apache-2.0 OR MIT",
+      "url": "https://crates.io/crates/portable-atomic/1.13.1"
+    },
+    {
+      "name": "portable-atomic-util",
+      "version": "0.2.5",
+      "license": "Apache-2.0 OR MIT",
+      "url": "https://crates.io/crates/portable-atomic-util/0.2.5"
+    },
+    {
+      "name": "potential_utf",
+      "version": "0.1.5",
+      "license": "Unicode-3.0",
+      "url": "https://crates.io/crates/potential_utf/0.1.5"
+    },
+    {
+      "name": "prettyplease",
+      "version": "0.2.37",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/prettyplease/0.2.37"
+    },
+    {
+      "name": "primal-check",
+      "version": "0.3.4",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/primal-check/0.3.4"
+    },
+    {
+      "name": "proc-macro-crate",
+      "version": "3.4.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/proc-macro-crate/3.4.0"
+    },
+    {
+      "name": "proc-macro2",
+      "version": "1.0.106",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/proc-macro2/1.0.106"
+    },
+    {
+      "name": "quote",
+      "version": "1.0.44",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/quote/1.0.44"
+    },
+    {
+      "name": "r-efi",
+      "version": "5.3.0",
+      "license": "MIT OR Apache-2.0 OR LGPL-2.1-or-later",
+      "url": "https://crates.io/crates/r-efi/5.3.0"
+    },
+    {
+      "name": "r-efi",
+      "version": "6.0.0",
+      "license": "MIT OR Apache-2.0 OR LGPL-2.1-or-later",
+      "url": "https://crates.io/crates/r-efi/6.0.0"
+    },
+    {
+      "name": "rand_core",
+      "version": "0.10.1",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/rand_core/0.10.1"
+    },
+    {
+      "name": "rayon",
+      "version": "1.11.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/rayon/1.11.0"
+    },
+    {
+      "name": "rayon-core",
+      "version": "1.13.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/rayon-core/1.13.0"
+    },
+    {
+      "name": "realfft",
+      "version": "3.5.0",
+      "license": "MIT",
+      "url": "https://crates.io/crates/realfft/3.5.0"
+    },
+    {
+      "name": "redox_syscall",
+      "version": "0.5.18",
+      "license": "MIT",
+      "url": "https://crates.io/crates/redox_syscall/0.5.18"
+    },
+    {
+      "name": "redox_syscall",
+      "version": "0.7.3",
+      "license": "MIT",
+      "url": "https://crates.io/crates/redox_syscall/0.7.3"
+    },
+    {
+      "name": "regex",
+      "version": "1.12.3",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/regex/1.12.3"
+    },
+    {
+      "name": "regex-automata",
+      "version": "0.4.14",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/regex-automata/0.4.14"
+    },
+    {
+      "name": "regex-syntax",
+      "version": "0.8.9",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/regex-syntax/0.8.9"
+    },
+    {
+      "name": "ring",
+      "version": "0.17.14",
+      "license": "Apache-2.0 AND ISC",
+      "url": "https://crates.io/crates/ring/0.17.14"
+    },
+    {
+      "name": "ringbuf",
+      "version": "0.4.8",
+      "license": "MIT/Apache-2.0",
+      "url": "https://crates.io/crates/ringbuf/0.4.8"
+    },
+    {
+      "name": "rubato",
+      "version": "0.15.0",
+      "license": "MIT",
+      "url": "https://crates.io/crates/rubato/0.15.0"
+    },
+    {
+      "name": "rusb",
+      "version": "0.9.4",
+      "license": "MIT",
+      "url": "https://crates.io/crates/rusb/0.9.4"
+    },
+    {
+      "name": "rustc-demangle",
+      "version": "0.1.27",
+      "license": "MIT/Apache-2.0",
+      "url": "https://crates.io/crates/rustc-demangle/0.1.27"
+    },
+    {
+      "name": "rustc-hash",
+      "version": "1.1.0",
+      "license": "Apache-2.0/MIT",
+      "url": "https://crates.io/crates/rustc-hash/1.1.0"
+    },
+    {
+      "name": "rustc-hash",
+      "version": "2.1.1",
+      "license": "Apache-2.0 OR MIT",
+      "url": "https://crates.io/crates/rustc-hash/2.1.1"
+    },
+    {
+      "name": "rustfft",
+      "version": "6.4.1",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/rustfft/6.4.1"
+    },
+    {
+      "name": "rustls",
+      "version": "0.23.43",
+      "license": "Apache-2.0 OR ISC OR MIT",
+      "url": "https://crates.io/crates/rustls/0.23.43"
+    },
+    {
+      "name": "rustls-pki-types",
+      "version": "1.15.1",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/rustls-pki-types/1.15.1"
+    },
+    {
+      "name": "rustls-webpki",
+      "version": "0.103.13",
+      "license": "ISC",
+      "url": "https://crates.io/crates/rustls-webpki/0.103.13"
+    },
+    {
+      "name": "rustversion",
+      "version": "1.0.22",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/rustversion/1.0.22"
+    },
+    {
+      "name": "same-file",
+      "version": "1.0.6",
+      "license": "Unlicense/MIT",
+      "url": "https://crates.io/crates/same-file/1.0.6"
+    },
+    {
+      "name": "sampled_data_duration",
+      "version": "0.3.1",
+      "license": "MIT",
+      "url": "https://crates.io/crates/sampled_data_duration/0.3.1"
+    },
+    {
+      "name": "scopeguard",
+      "version": "1.2.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/scopeguard/1.2.0"
+    },
+    {
+      "name": "serde",
+      "version": "1.0.228",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/serde/1.0.228"
+    },
+    {
+      "name": "serde_core",
+      "version": "1.0.228",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/serde_core/1.0.228"
+    },
+    {
+      "name": "serde_derive",
+      "version": "1.0.228",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/serde_derive/1.0.228"
+    },
+    {
+      "name": "serde_json",
+      "version": "1.0.149",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/serde_json/1.0.149"
+    },
+    {
+      "name": "sha1",
+      "version": "0.11.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/sha1/0.11.0"
+    },
+    {
+      "name": "sha2",
+      "version": "0.11.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/sha2/0.11.0"
+    },
+    {
+      "name": "sharded-slab",
+      "version": "0.1.7",
+      "license": "MIT",
+      "url": "https://crates.io/crates/sharded-slab/0.1.7"
+    },
+    {
+      "name": "shlex",
+      "version": "1.3.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/shlex/1.3.0"
+    },
+    {
+      "name": "simd-adler32",
+      "version": "0.3.8",
+      "license": "MIT",
+      "url": "https://crates.io/crates/simd-adler32/0.3.8"
+    },
+    {
+      "name": "slab",
+      "version": "0.4.12",
+      "license": "MIT",
+      "url": "https://crates.io/crates/slab/0.4.12"
+    },
+    {
+      "name": "smallvec",
+      "version": "1.15.1",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/smallvec/1.15.1"
+    },
+    {
+      "name": "smb2",
+      "version": "0.18.1",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/smb2/0.18.1"
+    },
+    {
+      "name": "socket2",
+      "version": "0.6.5",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/socket2/0.6.5"
+    },
+    {
+      "name": "stable_deref_trait",
+      "version": "1.2.1",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/stable_deref_trait/1.2.1"
+    },
+    {
+      "name": "strength_reduce",
+      "version": "0.2.4",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/strength_reduce/0.2.4"
+    },
+    {
+      "name": "subtle",
+      "version": "2.6.1",
+      "license": "BSD-3-Clause",
+      "url": "https://crates.io/crates/subtle/2.6.1"
+    },
+    {
+      "name": "symphonia",
+      "version": "0.5.5",
+      "license": "MPL-2.0",
+      "url": "https://crates.io/crates/symphonia/0.5.5"
+    },
+    {
+      "name": "symphonia-bundle-flac",
+      "version": "0.5.5",
+      "license": "MPL-2.0",
+      "url": "https://crates.io/crates/symphonia-bundle-flac/0.5.5"
+    },
+    {
+      "name": "symphonia-bundle-mp3",
+      "version": "0.5.5",
+      "license": "MPL-2.0",
+      "url": "https://crates.io/crates/symphonia-bundle-mp3/0.5.5"
+    },
+    {
+      "name": "symphonia-codec-aac",
+      "version": "0.5.5",
+      "license": "MPL-2.0",
+      "url": "https://crates.io/crates/symphonia-codec-aac/0.5.5"
+    },
+    {
+      "name": "symphonia-codec-adpcm",
+      "version": "0.5.5",
+      "license": "MPL-2.0",
+      "url": "https://crates.io/crates/symphonia-codec-adpcm/0.5.5"
+    },
+    {
+      "name": "symphonia-codec-alac",
+      "version": "0.5.5",
+      "license": "MPL-2.0",
+      "url": "https://crates.io/crates/symphonia-codec-alac/0.5.5"
+    },
+    {
+      "name": "symphonia-codec-pcm",
+      "version": "0.5.5",
+      "license": "MPL-2.0",
+      "url": "https://crates.io/crates/symphonia-codec-pcm/0.5.5"
+    },
+    {
+      "name": "symphonia-codec-vorbis",
+      "version": "0.5.5",
+      "license": "MPL-2.0",
+      "url": "https://crates.io/crates/symphonia-codec-vorbis/0.5.5"
+    },
+    {
+      "name": "symphonia-core",
+      "version": "0.5.5",
+      "license": "MPL-2.0",
+      "url": "https://crates.io/crates/symphonia-core/0.5.5"
+    },
+    {
+      "name": "symphonia-format-caf",
+      "version": "0.5.5",
+      "license": "MPL-2.0",
+      "url": "https://crates.io/crates/symphonia-format-caf/0.5.5"
+    },
+    {
+      "name": "symphonia-format-isomp4",
+      "version": "0.5.5",
+      "license": "MPL-2.0",
+      "url": "https://crates.io/crates/symphonia-format-isomp4/0.5.5"
+    },
+    {
+      "name": "symphonia-format-mkv",
+      "version": "0.5.5",
+      "license": "MPL-2.0",
+      "url": "https://crates.io/crates/symphonia-format-mkv/0.5.5"
+    },
+    {
+      "name": "symphonia-format-ogg",
+      "version": "0.5.5",
+      "license": "MPL-2.0",
+      "url": "https://crates.io/crates/symphonia-format-ogg/0.5.5"
+    },
+    {
+      "name": "symphonia-format-riff",
+      "version": "0.5.5",
+      "license": "MPL-2.0",
+      "url": "https://crates.io/crates/symphonia-format-riff/0.5.5"
+    },
+    {
+      "name": "symphonia-metadata",
+      "version": "0.5.5",
+      "license": "MPL-2.0",
+      "url": "https://crates.io/crates/symphonia-metadata/0.5.5"
+    },
+    {
+      "name": "symphonia-utils-xiph",
+      "version": "0.5.5",
+      "license": "MPL-2.0",
+      "url": "https://crates.io/crates/symphonia-utils-xiph/0.5.5"
+    },
+    {
+      "name": "syn",
+      "version": "2.0.117",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/syn/2.0.117"
+    },
+    {
+      "name": "syn",
+      "version": "3.0.3",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/syn/3.0.3"
+    },
+    {
+      "name": "synstructure",
+      "version": "0.13.2",
+      "license": "MIT",
+      "url": "https://crates.io/crates/synstructure/0.13.2"
+    },
+    {
+      "name": "thiserror",
+      "version": "1.0.69",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/thiserror/1.0.69"
+    },
+    {
+      "name": "thiserror",
+      "version": "2.0.20",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/thiserror/2.0.20"
+    },
+    {
+      "name": "thiserror-impl",
+      "version": "1.0.69",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/thiserror-impl/1.0.69"
+    },
+    {
+      "name": "thiserror-impl",
+      "version": "2.0.20",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/thiserror-impl/2.0.20"
+    },
+    {
+      "name": "thread_local",
+      "version": "1.1.9",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/thread_local/1.1.9"
+    },
+    {
+      "name": "threadpool",
+      "version": "1.8.1",
+      "license": "MIT/Apache-2.0",
+      "url": "https://crates.io/crates/threadpool/1.8.1"
+    },
+    {
+      "name": "tinystr",
+      "version": "0.8.3",
+      "license": "Unicode-3.0",
+      "url": "https://crates.io/crates/tinystr/0.8.3"
+    },
+    {
+      "name": "tokio",
+      "version": "1.49.0",
+      "license": "MIT",
+      "url": "https://crates.io/crates/tokio/1.49.0"
+    },
+    {
+      "name": "tokio-macros",
+      "version": "2.6.0",
+      "license": "MIT",
+      "url": "https://crates.io/crates/tokio-macros/2.6.0"
+    },
+    {
+      "name": "toml_datetime",
+      "version": "0.7.5+spec-1.1.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/toml_datetime/0.7.5+spec-1.1.0"
+    },
+    {
+      "name": "toml_edit",
+      "version": "0.23.10+spec-1.0.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/toml_edit/0.23.10+spec-1.0.0"
+    },
+    {
+      "name": "toml_parser",
+      "version": "1.0.9+spec-1.1.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/toml_parser/1.0.9+spec-1.1.0"
+    },
+    {
+      "name": "tracing",
+      "version": "0.1.44",
+      "license": "MIT",
+      "url": "https://crates.io/crates/tracing/0.1.44"
+    },
+    {
+      "name": "tracing-attributes",
+      "version": "0.1.31",
+      "license": "MIT",
+      "url": "https://crates.io/crates/tracing-attributes/0.1.31"
+    },
+    {
+      "name": "tracing-core",
+      "version": "0.1.36",
+      "license": "MIT",
+      "url": "https://crates.io/crates/tracing-core/0.1.36"
+    },
+    {
+      "name": "tracing-log",
+      "version": "0.2.0",
+      "license": "MIT",
+      "url": "https://crates.io/crates/tracing-log/0.2.0"
+    },
+    {
+      "name": "tracing-subscriber",
+      "version": "0.3.22",
+      "license": "MIT",
+      "url": "https://crates.io/crates/tracing-subscriber/0.3.22"
+    },
+    {
+      "name": "transpose",
+      "version": "0.2.3",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/transpose/0.2.3"
+    },
+    {
+      "name": "twox-hash",
+      "version": "2.1.3",
+      "license": "MIT",
+      "url": "https://crates.io/crates/twox-hash/2.1.3"
+    },
+    {
+      "name": "typenum",
+      "version": "1.20.1",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/typenum/1.20.1"
+    },
+    {
+      "name": "unicode-ident",
+      "version": "1.0.24",
+      "license": "(MIT OR Apache-2.0) AND Unicode-3.0",
+      "url": "https://crates.io/crates/unicode-ident/1.0.24"
+    },
+    {
+      "name": "universal-hash",
+      "version": "0.6.1",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/universal-hash/0.6.1"
+    },
+    {
+      "name": "untrusted",
+      "version": "0.9.0",
+      "license": "ISC",
+      "url": "https://crates.io/crates/untrusted/0.9.0"
+    },
+    {
+      "name": "ureq",
+      "version": "2.12.1",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/ureq/2.12.1"
+    },
+    {
+      "name": "url",
+      "version": "2.5.8",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/url/2.5.8"
+    },
+    {
+      "name": "utf8_iter",
+      "version": "1.0.4",
+      "license": "Apache-2.0 OR MIT",
+      "url": "https://crates.io/crates/utf8_iter/1.0.4"
+    },
+    {
+      "name": "valuable",
+      "version": "0.1.1",
+      "license": "MIT",
+      "url": "https://crates.io/crates/valuable/0.1.1"
+    },
+    {
+      "name": "vcpkg",
+      "version": "0.2.15",
+      "license": "MIT/Apache-2.0",
+      "url": "https://crates.io/crates/vcpkg/0.2.15"
+    },
+    {
+      "name": "version_check",
+      "version": "0.9.5",
+      "license": "MIT/Apache-2.0",
+      "url": "https://crates.io/crates/version_check/0.9.5"
+    },
+    {
+      "name": "walkdir",
+      "version": "2.5.0",
+      "license": "Unlicense/MIT",
+      "url": "https://crates.io/crates/walkdir/2.5.0"
+    },
+    {
+      "name": "wasi",
+      "version": "0.11.1+wasi-snapshot-preview1",
+      "license": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+      "url": "https://crates.io/crates/wasi/0.11.1+wasi-snapshot-preview1"
+    },
+    {
+      "name": "wasip2",
+      "version": "1.0.2+wasi-0.2.9",
+      "license": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+      "url": "https://crates.io/crates/wasip2/1.0.2+wasi-0.2.9"
+    },
+    {
+      "name": "wasm-bindgen",
+      "version": "0.2.111",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/wasm-bindgen/0.2.111"
+    },
+    {
+      "name": "wasm-bindgen-futures",
+      "version": "0.4.61",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/wasm-bindgen-futures/0.4.61"
+    },
+    {
+      "name": "wasm-bindgen-macro",
+      "version": "0.2.111",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/wasm-bindgen-macro/0.2.111"
+    },
+    {
+      "name": "wasm-bindgen-macro-support",
+      "version": "0.2.111",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/wasm-bindgen-macro-support/0.2.111"
+    },
+    {
+      "name": "wasm-bindgen-shared",
+      "version": "0.2.111",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/wasm-bindgen-shared/0.2.111"
+    },
+    {
+      "name": "web-sys",
+      "version": "0.3.88",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/web-sys/0.3.88"
+    },
+    {
+      "name": "webpki-roots",
+      "version": "0.26.11",
+      "license": "CDLA-Permissive-2.0",
+      "url": "https://crates.io/crates/webpki-roots/0.26.11"
+    },
+    {
+      "name": "webpki-roots",
+      "version": "1.0.9",
+      "license": "CDLA-Permissive-2.0",
+      "url": "https://crates.io/crates/webpki-roots/1.0.9"
+    },
+    {
+      "name": "winapi-util",
+      "version": "0.1.11",
+      "license": "Unlicense OR MIT",
+      "url": "https://crates.io/crates/winapi-util/0.1.11"
+    },
+    {
+      "name": "windows",
+      "version": "0.54.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows/0.54.0"
+    },
+    {
+      "name": "windows_aarch64_gnullvm",
+      "version": "0.42.2",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows_aarch64_gnullvm/0.42.2"
+    },
+    {
+      "name": "windows_aarch64_gnullvm",
+      "version": "0.48.5",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows_aarch64_gnullvm/0.48.5"
+    },
+    {
+      "name": "windows_aarch64_gnullvm",
+      "version": "0.52.6",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows_aarch64_gnullvm/0.52.6"
+    },
+    {
+      "name": "windows_aarch64_msvc",
+      "version": "0.42.2",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows_aarch64_msvc/0.42.2"
+    },
+    {
+      "name": "windows_aarch64_msvc",
+      "version": "0.48.5",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows_aarch64_msvc/0.48.5"
+    },
+    {
+      "name": "windows_aarch64_msvc",
+      "version": "0.52.6",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows_aarch64_msvc/0.52.6"
+    },
+    {
+      "name": "windows_i686_gnu",
+      "version": "0.42.2",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows_i686_gnu/0.42.2"
+    },
+    {
+      "name": "windows_i686_gnu",
+      "version": "0.48.5",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows_i686_gnu/0.48.5"
+    },
+    {
+      "name": "windows_i686_gnu",
+      "version": "0.52.6",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows_i686_gnu/0.52.6"
+    },
+    {
+      "name": "windows_i686_gnullvm",
+      "version": "0.52.6",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows_i686_gnullvm/0.52.6"
+    },
+    {
+      "name": "windows_i686_msvc",
+      "version": "0.42.2",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows_i686_msvc/0.42.2"
+    },
+    {
+      "name": "windows_i686_msvc",
+      "version": "0.48.5",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows_i686_msvc/0.48.5"
+    },
+    {
+      "name": "windows_i686_msvc",
+      "version": "0.52.6",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows_i686_msvc/0.52.6"
+    },
+    {
+      "name": "windows_x86_64_gnu",
+      "version": "0.42.2",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows_x86_64_gnu/0.42.2"
+    },
+    {
+      "name": "windows_x86_64_gnu",
+      "version": "0.48.5",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows_x86_64_gnu/0.48.5"
+    },
+    {
+      "name": "windows_x86_64_gnu",
+      "version": "0.52.6",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows_x86_64_gnu/0.52.6"
+    },
+    {
+      "name": "windows_x86_64_gnullvm",
+      "version": "0.42.2",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows_x86_64_gnullvm/0.42.2"
+    },
+    {
+      "name": "windows_x86_64_gnullvm",
+      "version": "0.48.5",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows_x86_64_gnullvm/0.48.5"
+    },
+    {
+      "name": "windows_x86_64_gnullvm",
+      "version": "0.52.6",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows_x86_64_gnullvm/0.52.6"
+    },
+    {
+      "name": "windows_x86_64_msvc",
+      "version": "0.42.2",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows_x86_64_msvc/0.42.2"
+    },
+    {
+      "name": "windows_x86_64_msvc",
+      "version": "0.48.5",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows_x86_64_msvc/0.48.5"
+    },
+    {
+      "name": "windows_x86_64_msvc",
+      "version": "0.52.6",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows_x86_64_msvc/0.52.6"
+    },
+    {
+      "name": "windows-core",
+      "version": "0.54.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows-core/0.54.0"
+    },
+    {
+      "name": "windows-link",
+      "version": "0.2.1",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows-link/0.2.1"
+    },
+    {
+      "name": "windows-result",
+      "version": "0.1.2",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows-result/0.1.2"
+    },
+    {
+      "name": "windows-sys",
+      "version": "0.45.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows-sys/0.45.0"
+    },
+    {
+      "name": "windows-sys",
+      "version": "0.48.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows-sys/0.48.0"
+    },
+    {
+      "name": "windows-sys",
+      "version": "0.52.0",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows-sys/0.52.0"
+    },
+    {
+      "name": "windows-sys",
+      "version": "0.61.2",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows-sys/0.61.2"
+    },
+    {
+      "name": "windows-targets",
+      "version": "0.42.2",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows-targets/0.42.2"
+    },
+    {
+      "name": "windows-targets",
+      "version": "0.48.5",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows-targets/0.48.5"
+    },
+    {
+      "name": "windows-targets",
+      "version": "0.52.6",
+      "license": "MIT OR Apache-2.0",
+      "url": "https://crates.io/crates/windows-targets/0.52.6"
+    },
+    {
+      "name": "winnow",
+      "version": "0.7.14",
+      "license": "MIT",
+      "url": "https://crates.io/crates/winnow/0.7.14"
+    },
+    {
+      "name": "wit-bindgen",
+      "version": "0.51.0",
+      "license": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+      "url": "https://crates.io/crates/wit-bindgen/0.51.0"
+    },
+    {
+      "name": "writeable",
+      "version": "0.6.3",
+      "license": "Unicode-3.0",
+      "url": "https://crates.io/crates/writeable/0.6.3"
+    },
+    {
+      "name": "yoke",
+      "version": "0.8.3",
+      "license": "Unicode-3.0",
+      "url": "https://crates.io/crates/yoke/0.8.3"
+    },
+    {
+      "name": "yoke-derive",
+      "version": "0.8.2",
+      "license": "Unicode-3.0",
+      "url": "https://crates.io/crates/yoke-derive/0.8.2"
+    },
+    {
+      "name": "zerofrom",
+      "version": "0.1.8",
+      "license": "Unicode-3.0",
+      "url": "https://crates.io/crates/zerofrom/0.1.8"
+    },
+    {
+      "name": "zerofrom-derive",
+      "version": "0.1.7",
+      "license": "Unicode-3.0",
+      "url": "https://crates.io/crates/zerofrom-derive/0.1.7"
+    },
+    {
+      "name": "zeroize",
+      "version": "1.9.0",
+      "license": "Apache-2.0 OR MIT",
+      "url": "https://crates.io/crates/zeroize/1.9.0"
+    },
+    {
+      "name": "zerotrie",
+      "version": "0.2.4",
+      "license": "Unicode-3.0",
+      "url": "https://crates.io/crates/zerotrie/0.2.4"
+    },
+    {
+      "name": "zerovec",
+      "version": "0.11.6",
+      "license": "Unicode-3.0",
+      "url": "https://crates.io/crates/zerovec/0.11.6"
+    },
+    {
+      "name": "zerovec-derive",
+      "version": "0.11.3",
+      "license": "Unicode-3.0",
+      "url": "https://crates.io/crates/zerovec-derive/0.11.3"
+    },
+    {
+      "name": "zmij",
+      "version": "1.0.21",
+      "license": "MIT",
+      "url": "https://crates.io/crates/zmij/1.0.21"
+    }
+  ],
+  "web": [
+    {
+      "name": "@eslint/js",
+      "version": "10.0.1",
+      "license": "MIT",
+      "url": "https://www.npmjs.com/package/@eslint/js"
+    },
+    {
+      "name": "@fontsource-variable/dm-sans",
+      "version": "5.3.0",
+      "license": "OFL-1.1",
+      "url": "https://www.npmjs.com/package/@fontsource-variable/dm-sans"
+    },
+    {
+      "name": "@fontsource-variable/geist",
+      "version": "5.3.0",
+      "license": "OFL-1.1",
+      "url": "https://www.npmjs.com/package/@fontsource-variable/geist"
+    },
+    {
+      "name": "@fontsource-variable/jetbrains-mono",
+      "version": "5.3.0",
+      "license": "OFL-1.1",
+      "url": "https://www.npmjs.com/package/@fontsource-variable/jetbrains-mono"
+    },
+    {
+      "name": "@tailwindcss/vite",
+      "version": "4.2.2",
+      "license": "MIT",
+      "url": "https://www.npmjs.com/package/@tailwindcss/vite"
+    },
+    {
+      "name": "@types/node",
+      "version": "25.5.0",
+      "license": "MIT",
+      "url": "https://www.npmjs.com/package/@types/node"
+    },
+    {
+      "name": "eslint",
+      "version": "10.11.0",
+      "license": "MIT",
+      "url": "https://www.npmjs.com/package/eslint"
+    },
+    {
+      "name": "eslint-config-prettier",
+      "version": "10.1.8",
+      "license": "MIT",
+      "url": "https://www.npmjs.com/package/eslint-config-prettier"
+    },
+    {
+      "name": "globals",
+      "version": "17.12.0",
+      "license": "MIT",
+      "url": "https://www.npmjs.com/package/globals"
+    },
+    {
+      "name": "motion",
+      "version": "12.38.0",
+      "license": "MIT",
+      "url": "https://www.npmjs.com/package/motion"
+    },
+    {
+      "name": "prettier",
+      "version": "3.9.9",
+      "license": "MIT",
+      "url": "https://www.npmjs.com/package/prettier"
+    },
+    {
+      "name": "qrcode",
+      "version": "1.5.4",
+      "license": "MIT",
+      "url": "https://www.npmjs.com/package/qrcode"
+    },
+    {
+      "name": "smol-toml",
+      "version": "1.9.0",
+      "license": "BSD-3-Clause",
+      "url": "https://www.npmjs.com/package/smol-toml"
+    },
+    {
+      "name": "tailwindcss",
+      "version": "4.2.2",
+      "license": "MIT",
+      "url": "https://www.npmjs.com/package/tailwindcss"
+    },
+    {
+      "name": "typescript",
+      "version": "5.9.3",
+      "license": "Apache-2.0",
+      "url": "https://www.npmjs.com/package/typescript"
+    },
+    {
+      "name": "typescript-eslint",
+      "version": "8.70.1",
+      "license": "MIT",
+      "url": "https://www.npmjs.com/package/typescript-eslint"
+    },
+    {
+      "name": "vite",
+      "version": "8.3.1",
+      "license": "MIT",
+      "url": "https://www.npmjs.com/package/vite"
+    },
+    {
+      "name": "yaml",
+      "version": "2.9.1",
+      "license": "ISC",
+      "url": "https://www.npmjs.com/package/yaml"
+    }
+  ]
+}
