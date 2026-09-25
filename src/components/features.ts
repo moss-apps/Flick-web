@@ -1,3 +1,7 @@
+import { REPO_URL } from "../site";
+
+const BENCHMARK_URL = `${REPO_URL}/blob/main/docs/scanning_benchmark05092026.md`;
+
 export function Features(): string {
   return `
 <section class="bg-[#101010] text-white py-24 md:py-32 relative z-20 border-t border-white/5">
@@ -57,7 +61,7 @@ export function Features(): string {
         <div>
           <h3 class="text-xl font-bold mb-3 tracking-tight">Smart Library</h3>
           <p class="text-gray-400 leading-relaxed text-sm">
-            MediaStore-based scanning with differential database sync (~34× faster than filesystem walk). Deep metadata extraction, duplicate cleaner, CUE sheet support, and Isar-powered queries.
+            MediaStore-based scanning with differential database sync (<a href="${BENCHMARK_URL}" target="_blank" rel="noopener" class="text-gray-300 underline decoration-gray-500 underline-offset-4 hover:text-white hover:decoration-white">~34× faster</a> than a filesystem walk, per the project's HiBy R4 benchmark). Deep metadata extraction, duplicate cleaner, CUE sheet support, and Isar-powered queries.
           </p>
         </div>
       </div>

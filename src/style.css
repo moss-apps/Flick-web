@@ -1,13 +1,262 @@
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,400..700&display=swap');
 @import "tailwindcss";
+@import "@fontsource-variable/geist/index.css";
+@import "@fontsource-variable/dm-sans/index.css";
+@import "@fontsource-variable/jetbrains-mono/index.css";
 
 @theme {
-  /* FIX: Changed from --font-family-sans to --font-sans */
-  --font-sans: "Google Sans Flex", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "DM Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, SFMono-Regular, monospace;
+  /* Raised from Tailwind defaults for readable contrast on #101010. */
+  --color-gray-500: #8f97a6;
+  --color-gray-600: #7c8595;
 }
 
 body {
   background-color: #101010;
-  /* Apply it here directly to the body */
-  font-family: "Google Sans Flex", sans-serif;
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--font-mono);
+}
+
+.content-prose {
+  color: var(--color-gray-300);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.content-prose > * + * {
+  margin-top: 1rem;
+}
+
+.content-prose h2 {
+  margin-top: 3rem;
+  margin-bottom: 0.75rem;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.content-prose h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.content-prose p {
+  margin-bottom: 1rem;
+}
+
+.content-prose ul,
+.content-prose ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.content-prose ul {
+  list-style: disc;
+}
+
+.content-prose ol {
+  list-style: decimal;
+}
+
+.content-prose li {
+  margin-bottom: 0.5rem;
+  padding-left: 0.25rem;
+}
+
+.content-prose li::marker {
+  color: rgb(255 255 255 / 0.35);
+}
+
+.content-prose a {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: rgb(255 255 255 / 0.3);
+  text-underline-offset: 4px;
+  transition: text-decoration-color 150ms ease;
+}
+
+.content-prose a:hover {
+  text-decoration-color: rgb(255 255 255 / 0.9);
+}
+
+.content-prose strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.content-prose em {
+  font-style: italic;
+}
+
+.content-prose code {
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  background: rgb(255 255 255 / 0.1);
+  color: #e5e5e5;
+  font-size: 0.85em;
+}
+
+.content-prose pre {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  border: 1px solid rgb(255 255 255 / 0.1);
+  border-radius: 1rem;
+  background: #161616;
+  font-size: 0.8125rem;
+  line-height: 1.7;
+}
+
+.content-prose pre code {
+  padding: 0;
+  background: none;
+  color: #d4d4d4;
+  font-size: inherit;
+}
+
+.content-prose hr {
+  margin: 2.5rem 0;
+  border: 0;
+  border-top: 1px solid rgb(255 255 255 / 0.1);
+}
+
+.content-prose blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+  border-left: 2px solid rgb(255 255 255 / 0.2);
+  color: var(--color-gray-400);
+  font-style: italic;
+}
+
+.content-prose-table {
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+
+.content-prose table {
+  width: 100%;
+  min-width: 36rem;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+.content-prose th {
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1px solid rgb(255 255 255 / 0.15);
+  color: var(--color-gray-500);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.content-prose td {
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1px solid rgb(255 255 255 / 0.05);
+  color: var(--color-gray-400);
+  vertical-align: top;
+}
+
+.content-prose td a {
+  text-decoration-color: rgb(255 255 255 / 0.15);
+}
+
+.license-text {
+  max-height: 24rem;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgb(255 255 255 / 0.08);
+}
+
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  color: #fff;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  flex-shrink: 0;
+  color: rgb(255 255 255 / 0.4);
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 400;
+  transition: transform 200ms ease;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item > *:not(summary) {
+  padding-bottom: 1.25rem;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
+  background: #fff;
+  color: #101010;
+  font-size: 0.875rem;
+  font-weight: 700;
+  transform: translateY(-300%);
+  transition: transform 150ms ease;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+:focus-visible {
+  outline: 2px solid rgb(255 255 255 / 0.8);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

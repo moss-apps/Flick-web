@@ -7,13 +7,42 @@ const SITE_ORIGIN = "https://flick-player.site";
 const WINDOW_MS = 60_000;
 const MAX_HITS = 60;
 const SCRAPER_UA: readonly RegExp[] = [
-  /gptbot/i, /oai-searchbot/i, /claudebot/i, /claude-web/i, /anthropic-ai/i,
-  /ccbot/i, /google-extended/i, /bytespider/i, /facebookbot/i, /meta-externalagent/i,
-  /perplexitybot/i, /amazonbot/i, /semrush/i, /ahrefs/i, /dotbot/i, /petalbot/i,
-  /mj12bot/i, /yandex/i, /baiduspider/i, /scrapy/i, /\bcurl\b/i, /\bwget\b/i,
-  /python-requests/i, /python-urllib/i, /httpx/i, /node-fetch/i, /axios\/[\d.]+/i,
-  /go-http-client/i, /java\/[\d.]+/i, /okhttp/i, /headless/i, /phantom/i,
-  /selenium/i, /puppeteer/i, /webdriver/i, /chrome-lighthouse/i,
+  /gptbot/i,
+  /oai-searchbot/i,
+  /claudebot/i,
+  /claude-web/i,
+  /anthropic-ai/i,
+  /ccbot/i,
+  /google-extended/i,
+  /bytespider/i,
+  /facebookbot/i,
+  /meta-externalagent/i,
+  /perplexitybot/i,
+  /amazonbot/i,
+  /semrush/i,
+  /ahrefs/i,
+  /dotbot/i,
+  /petalbot/i,
+  /mj12bot/i,
+  /yandex/i,
+  /baiduspider/i,
+  /scrapy/i,
+  /\bcurl\b/i,
+  /\bwget\b/i,
+  /python-requests/i,
+  /python-urllib/i,
+  /httpx/i,
+  /node-fetch/i,
+  /axios\/[\d.]+/i,
+  /go-http-client/i,
+  /java\/[\d.]+/i,
+  /okhttp/i,
+  /headless/i,
+  /phantom/i,
+  /selenium/i,
+  /puppeteer/i,
+  /webdriver/i,
+  /chrome-lighthouse/i,
 ];
 
 function isBlockedBot(userAgent: string): boolean {
@@ -63,6 +92,92 @@ interface VercelResponse {
   send(body: string): VercelResponse;
 }
 
+const HOME_URL = `${SITE_ORIGIN}/`;
+const ISSUES_URL = "https://github.com/moss-apps/Flick/issues";
+
+const HTML_ESCAPES: Record<string, string> = {
+  "&": "&amp;",
+  "<": "&lt;",
+  ">": "&gt;",
+  '"': "&quot;",
+  "'": "&#39;",
+};
+
+function escapeHtml(value: string): string {
+  return value.replace(/[&<>"']/g, (char) => HTML_ESCAPES[char] ?? char);
+}
+
+function wantsHtml(req: VercelRequest): boolean {
+  return (req.headers["accept"] ?? "").includes("text/html");
+}
+
+function htmlErrorPage(status: number, title: string, message: string): string {
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>${status} — ${escapeHtml(title)}</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: #101010;
+    color: #e5e5e5;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+  }
+  main { max-width: 34rem; padding: 2.5rem 1.5rem; text-align: center; }
+  .code { color: #737373; font-size: .8125rem; letter-spacing: .3em; text-transform: uppercase; margin: 0 0 .75rem; }
+  h1 { font-size: 1.75rem; margin: 0 0 .75rem; letter-spacing: -.02em; }
+  p { color: #a3a3a3; margin: 0 0 2rem; }
+  nav { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; }
+  a {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: .75rem;
+    padding: .75rem 1.5rem;
+    font-weight: 600;
+    font-size: .9375rem;
+  }
+  a:hover { background: rgba(255, 255, 255, .06); }
+</style>
+</head>
+<body>
+<main>
+  <p class="code">Error ${status}</p>
+  <h1>${escapeHtml(title)}</h1>
+  <p>${escapeHtml(message)}</p>
+  <nav>
+    <a href="${HOME_URL}">Back to Flick</a>
+    <a href="${ISSUES_URL}">Report a problem</a>
+  </nav>
+</main>
+</body>
+</html>`;
+}
+
+function fail(
+  req: VercelRequest,
+  res: VercelResponse,
+  status: number,
+  message: string,
+  title = "Something went wrong",
+): VercelResponse {
+  if (wantsHtml(req)) {
+    res.setHeader("Content-Type", "text/html; charset=utf-8");
+    res.setHeader("Cache-Control", "no-store");
+    return res.status(status).send(htmlErrorPage(status, title, message));
+  }
+  return res.status(status).json({ error: message });
+}
+
 // Only allow safe characters in owner/repo segments (alphanumeric, hyphens, dots, underscores)
 const ALLOWED_PATHS = [
   /^\/repos\/[a-zA-Z0-9_.-]+\/[a-zA-Z0-9_.-]+\/releases$/,
@@ -80,32 +195,32 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   res.setHeader("Access-Control-Allow-Methods", "GET");
 
   if (req.method !== "GET") {
-    return res.status(405).json({ error: "Method not allowed" });
+    return fail(req, res, 405, "Method not allowed", "Method not allowed");
   }
 
   if (isBlockedBot(req.headers["user-agent"] ?? "")) {
-    return res.status(403).json({ error: "Forbidden" });
+    return fail(req, res, 403, "Forbidden", "Access denied");
   }
 
   if (rateLimited(clientIp(req.headers))) {
     res.setHeader("Retry-After", "60");
-    return res.status(429).json({ error: "Too many requests" });
+    return fail(req, res, 429, "Too many requests", "Too many requests");
   }
 
   const path = req.query.path as string | undefined;
   if (!path) {
-    return res.status(400).json({ error: "Missing path parameter" });
+    return fail(req, res, 400, "Missing path parameter", "Bad request");
   }
 
   const decodedPath = decodeURIComponent(path);
 
   // Reject double-encoded paths
   if (decodedPath !== decodeURIComponent(decodedPath)) {
-    return res.status(400).json({ error: "Invalid path encoding" });
+    return fail(req, res, 400, "Invalid path encoding", "Bad request");
   }
 
   if (!ALLOWED_PATHS.some((pattern) => pattern.test(decodedPath))) {
-    return res.status(403).json({ error: "Path not allowed" });
+    return fail(req, res, 403, "Path not allowed", "Access denied");
   }
 
   // Whitelist query string parameters
@@ -144,12 +259,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const body = await upstream.text();
 
-    res.setHeader(
-      "Cache-Control",
-      "public, s-maxage=600, stale-while-revalidate=60",
-    );
+    res.setHeader("Cache-Control", "public, s-maxage=600, stale-while-revalidate=60");
     return res.status(upstream.status).send(body);
   } catch {
-    return res.status(502).json({ error: "Failed to reach GitHub API" });
+    return fail(req, res, 502, "Failed to reach GitHub API", "Upstream unavailable");
   }
 }

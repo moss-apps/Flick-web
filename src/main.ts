@@ -6,14 +6,18 @@ import {
   fetchContributors,
   initReleaseNotesPage,
 } from "./api/github";
+import { initAnimations, initHeroAnimation, initNavbarAnimation } from "./animations";
+import { initFooter } from "./components/footer";
+import { renderPage } from "./render";
 import {
-  initAnimations,
-  initHeroAnimation,
-  initNavbarAnimation,
-} from "./animations";
-import { renderPage, routeFromPath, routeMeta, SITE_ORIGIN, type AppRoute } from "./render";
-
-const VALID_ROUTES = new Set(["/", "/downloads", "/release-notes"]);
+  normalizePath,
+  routeFromPath,
+  routeMeta,
+  VALID_PATHS,
+  type AppRoute,
+} from "./routes";
+import { SITE_ORIGIN } from "./site";
+import { buildStructuredData } from "./structured-data";
 
 let releaseRefreshTimer: ReturnType<typeof setInterval> | null = null;
 
@@ -22,9 +26,10 @@ function getCurrentRoute(): AppRoute {
 }
 
 function navigate(path: string): void {
-  if (path === window.location.pathname) return;
-  if (!VALID_ROUTES.has(path)) return;
-  window.history.pushState({}, "", path);
+  const normalized = normalizePath(path);
+  if (normalized === normalizePath(window.location.pathname)) return;
+  if (!VALID_PATHS.has(normalized)) return;
+  window.history.pushState({}, "", normalized);
   window.scrollTo(0, 0);
   renderApp();
 }
@@ -46,6 +51,7 @@ function renderApp(): void {
   initNavbarScroll();
   initNavbarAnimation();
   initAnimations();
+  initFooter();
   fetchLatestCommit();
 
   if (route === "release-notes") {
@@ -54,17 +60,22 @@ function renderApp(): void {
     return;
   }
 
-  fetchLatestRelease();
-
-  if (route === "downloads") {
-    releaseRefreshTimer = setInterval(() => {
-      void fetchLatestRelease();
-    }, 5 * 60 * 1000);
+  if (route === "home") {
+    fetchLatestRelease();
+    initHeroAnimation();
+    fetchContributors();
     return;
   }
 
-  initHeroAnimation();
-  fetchContributors();
+  if (route === "downloads") {
+    fetchLatestRelease();
+    releaseRefreshTimer = setInterval(
+      () => {
+        void fetchLatestRelease();
+      },
+      5 * 60 * 1000,
+    );
+  }
 }
 
 window.addEventListener("popstate", () => {
@@ -85,20 +96,17 @@ document.addEventListener("click", (e) => {
     return;
   }
   if (url.origin !== window.location.origin) return;
-  if (!VALID_ROUTES.has(url.pathname)) return;
+  const path = normalizePath(url.pathname);
+  if (!VALID_PATHS.has(path)) return;
   e.preventDefault();
-  navigate(url.pathname);
+  navigate(path);
 });
 
 renderApp();
 
 function initImageModal(): void {
-  const modal = document.getElementById(
-    "image-modal",
-  ) as HTMLDialogElement | null;
-  const modalImg = document.getElementById(
-    "image-modal-img",
-  ) as HTMLImageElement | null;
+  const modal = document.getElementById("image-modal") as HTMLDialogElement | null;
+  const modalImg = document.getElementById("image-modal-img") as HTMLImageElement | null;
   const closeBtn = document.getElementById("image-modal-close");
   if (!modal || !modalImg) return;
 
@@ -120,22 +128,30 @@ function initImageModal(): void {
 
 function applyMeta(route: AppRoute): void {
   const meta = routeMeta(route);
-  const url = SITE_ORIGIN + meta.path;
+  const url = meta.path === "/" ? `${SITE_ORIGIN}/` : `${SITE_ORIGIN}${meta.path}`;
   document.title = meta.title;
   setAttr('meta[name="description"]', "content", meta.description);
+  setAttr(
+    'meta[name="robots"]',
+    "content",
+    meta.noindex ? "noindex, nofollow" : "index, follow",
+  );
   setAttr('meta[property="og:title"]', "content", meta.title);
   setAttr('meta[property="og:description"]', "content", meta.description);
   setAttr('meta[property="og:url"]', "content", url);
   setAttr('meta[name="twitter:title"]', "content", meta.title);
   setAttr('meta[name="twitter:description"]', "content", meta.description);
   setAttr('link[rel="canonical"]', "href", url);
+
+  const structuredData = buildStructuredData(route);
+  const ldJson = document.getElementById("ld-json");
+  if (ldJson) {
+    if (structuredData) ldJson.textContent = structuredData;
+    else ldJson.remove();
+  }
 }
 
-function setAttr(
-  selector: string,
-  attr: string,
-  value: string,
-): void {
+function setAttr(selector: string, attr: string, value: string): void {
   const el = document.head.querySelector(selector);
   if (el) el.setAttribute(attr, value);
 }

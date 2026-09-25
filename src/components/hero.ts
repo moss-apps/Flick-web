@@ -1,15 +1,25 @@
 import prodsample2 from "../assets/Product-Sample2.png";
+import prodsample2Webp from "../assets/Product-Sample2.webp";
+import prodsample2Avif from "../assets/Product-Sample2.avif";
 import { DownloadStats } from "./download-stats";
 
 export function Hero(): string {
   return `
 <div id="hero-section" class="relative w-full min-h-[100dvh] overflow-hidden bg-[#101010] font-sans lg:h-[100dvh]">
 
-  <img 
-    src="${prodsample2}" 
-    alt="Flick Player Interface" 
-    class="absolute bottom-0 right-0 w-full h-[65dvh] lg:top-0 lg:h-full lg:w-[60%] object-cover object-top lg:object-left-top z-0"
-  >
+  <picture class="absolute bottom-0 right-0 block w-full h-[65dvh] lg:top-0 lg:h-full lg:w-[60%] z-0">
+    <source srcset="${prodsample2Avif}" type="image/avif" />
+    <source srcset="${prodsample2Webp}" type="image/webp" />
+    <img
+      src="${prodsample2}"
+      alt="Flick Player Interface"
+      width="1280"
+      height="1440"
+      fetchpriority="high"
+      decoding="async"
+      class="w-full h-full object-cover object-top lg:object-left-top"
+    />
+  </picture>
 
   <div class="absolute inset-x-0 top-0 h-[100dvh] bg-gradient-to-b from-[#101010] from-[35%] via-[#101010]/80 via-[50%] to-transparent lg:hidden z-[5]"></div>
 

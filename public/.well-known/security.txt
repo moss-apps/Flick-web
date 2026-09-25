@@ -1,0 +1,5 @@
+Contact: mailto:moss_apps@proton.me
+Contact: https://github.com/moss-apps/Flick/issues
+Expires: 2027-09-25T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://flick-player.site/.well-known/security.txt

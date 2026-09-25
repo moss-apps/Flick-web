@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
-import { prerender } from "./prerender";
+import { prerender } from "./prerender.ts";
 
 export default defineConfig({
   plugins: [tailwindcss(), prerender()],

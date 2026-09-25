@@ -1,4 +1,6 @@
 import flicklogo from "../assets/flick_logo.svg";
+import type { AppRoute } from "../routes";
+import { REPO_URL } from "../site";
 
 let hasBoundNavbarScroll = false;
 
@@ -8,34 +10,28 @@ function getRouteLinkClasses(isActive: boolean): string {
     : "text-gray-400 hover:text-white hover:bg-white/8";
 }
 
-function getRouteLinks(
-  currentRoute: "home" | "downloads" | "release-notes",
-): string {
+function routeLink(href: string, label: string, isActive: boolean): string {
   return `
     <a
-      href="/"
-      class="inline-flex items-center justify-center rounded-full px-3 py-2 text-[11px] md:text-xs font-bold tracking-[0.18em] uppercase transition-all ${getRouteLinkClasses(currentRoute === "home")}"
+      href="${href}"
+      ${isActive ? 'aria-current="page"' : ""}
+      class="inline-flex items-center justify-center rounded-full px-3 py-2 text-[11px] md:text-xs font-bold tracking-[0.18em] uppercase transition-all ${getRouteLinkClasses(isActive)}"
     >
-      Home
-    </a>
-    <a
-      href="/release-notes"
-      class="inline-flex items-center justify-center rounded-full px-3 py-2 text-[11px] md:text-xs font-bold tracking-[0.18em] uppercase transition-all ${getRouteLinkClasses(currentRoute === "release-notes")}"
-    >
-      Releases
-    </a>
-    <a
-      href="/downloads"
-      class="inline-flex items-center justify-center rounded-full px-3 py-2 text-[11px] md:text-xs font-bold tracking-[0.18em] uppercase transition-all ${getRouteLinkClasses(currentRoute === "downloads")}"
-    >
-      Downloads
+      ${label}
     </a>
   `;
 }
 
-export function Navbar(
-  currentRoute: "home" | "downloads" | "release-notes" = "home",
-): string {
+function getRouteLinks(currentRoute: AppRoute): string {
+  return [
+    routeLink("/", "Home", currentRoute === "home"),
+    routeLink("/release-notes", "Releases", currentRoute === "release-notes"),
+    routeLink("/downloads", "Downloads", currentRoute === "downloads"),
+    routeLink("/community", "Community", currentRoute === "community"),
+  ].join("");
+}
+
+export function Navbar(currentRoute: AppRoute = "home"): string {
   return `
 <nav id="main-nav" class="fixed top-0 left-0 w-full px-4 sm:px-6 md:px-8 lg:px-16 py-4 md:py-6 z-50 transition-all duration-300">
   <div class="flex items-center justify-between gap-3">
@@ -52,7 +48,7 @@ export function Navbar(
 
     <div class="flex items-center gap-3">
       <a
-        href="https://github.com/ultraelectronica/Flick"
+        href="${REPO_URL}"
         target="_blank"
         rel="noopener"
         class="hidden md:inline-flex items-center gap-2 px-3 py-1.5 md:px-5 md:py-2 rounded-full bg-[#2A2A2A]/80 backdrop-blur-md border border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.25)] hover:shadow-[0_0_25px_rgba(255,255,255,0.45)] hover:bg-[#333333] transition-all cursor-pointer"
@@ -91,7 +87,7 @@ export function Navbar(
       ${getRouteLinks(currentRoute)}
     </div>
     <a
-      href="https://github.com/ultraelectronica/Flick"
+      href="https://github.com/moss-apps/Flick"
       target="_blank"
       rel="noopener"
       class="mt-3 inline-flex w-full items-center justify-between rounded-[22px] border border-white/12 bg-[#2A2A2A]/80 px-4 py-3 text-white shadow-[0_0_15px_rgba(255,255,255,0.18)] transition hover:bg-[#333333]"
