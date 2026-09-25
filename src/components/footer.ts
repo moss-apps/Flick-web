@@ -1,12 +1,32 @@
 import flicklogo from "../assets/flick_logo.svg";
+import type { AppRoute } from "../routes";
+import {
+  CONTACT_EMAIL,
+  FEED_PATH,
+  ISSUES_URL,
+  PULLS_URL,
+  REPO_URL,
+  RELEASES_URL,
+} from "../site";
 
-export function Footer(
-  currentRoute: "home" | "downloads" | "release-notes" = "home",
-): string {
+export function initFooter(): void {
+  const button = document.getElementById("back-to-top");
+  button?.addEventListener("click", () => {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+  });
+}
+
+function footerLink(href: string, label: string, external = false): string {
+  const attrs = external ? ' target="_blank" rel="noopener"' : "";
+  return `<a href="${href}"${attrs} class="hover:text-white transition-colors">${label}</a>`;
+}
+
+export function Footer(currentRoute: AppRoute = "home"): string {
   const secondaryAction =
     currentRoute === "home"
       ? `
-          <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="inline-flex justify-center items-center space-x-3 bg-transparent text-white border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition-all active:scale-95">
+          <button id="back-to-top" type="button" class="inline-flex justify-center items-center space-x-3 bg-transparent text-white border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition-all active:scale-95 cursor-pointer">
             <span>Back to Top</span>
           </button>`
       : `
@@ -27,15 +47,15 @@ export function Footer(
         </svg>
 
         <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-6 text-balance">
-          Completely Open Source. <br> Built for the Community.
+          Open Source, End to End. <br> No Ads. No Tracking.
         </h2>
         
         <p class="text-gray-400 text-lg md:text-xl mb-10 leading-relaxed text-balance">
-          Flick Player is fully open source — no premium features, no ads, no paid components. Inspect the Rust audio engine, contribute, or compile it yourself.
+          Flick is MIT-licensed from the Rust audio engine to this website. Read the code, open an issue, or build the APK yourself.
         </p>
         
         <div class="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
-          <a href="https://github.com/ultraelectronica/Flick" target="_blank" rel="noopener" class="inline-flex justify-center items-center space-x-3 bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-gray-200 transition-all active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]">
+          <a href="${REPO_URL}" target="_blank" rel="noopener" class="inline-flex justify-center items-center space-x-3 bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-gray-200 transition-all active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]">
             <span>View Source on GitHub</span>
           </a>
           
@@ -44,23 +64,59 @@ export function Footer(
       </div>
     </div>
 
-    <footer class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6" data-animate="fade-up" data-animate-delay="0.2">
-      
-      <div class="flex items-center gap-4">
-        <img src="${flicklogo}" alt="Flick Logo" class="h-6 w-6 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
-        <span class="text-gray-500 text-sm font-medium tracking-wide">
-          © 2026 Flick. All rights reserved.
+    <footer class="border-t border-white/10 pt-12" data-animate="fade-up" data-animate-delay="0.2">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-10">
+        <div class="col-span-2 md:col-span-1">
+          <div class="flex items-center gap-3">
+            <img src="${flicklogo}" alt="Flick Logo" class="h-6 w-6 opacity-60">
+            <span class="text-white font-semibold tracking-wide">Flick</span>
+          </div>
+          <p class="text-gray-500 text-sm mt-4 max-w-xs leading-relaxed">
+            Bit-perfect audiophile music player for Android. Built by Moss.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-[11px] font-bold tracking-[0.18em] uppercase text-gray-400 mb-4">Product</h3>
+          <ul class="space-y-2 text-sm font-medium text-gray-500">
+            <li>${footerLink("/downloads", "Downloads")}</li>
+            <li>${footerLink("/release-notes", "Release Notes")}</li>
+            <li>${footerLink("/supported-dacs", "Supported DACs")}</li>
+            <li>${footerLink("/faq", "FAQ")}</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-[11px] font-bold tracking-[0.18em] uppercase text-gray-400 mb-4">Project</h3>
+          <ul class="space-y-2 text-sm font-medium text-gray-500">
+            <li>${footerLink(REPO_URL, "GitHub", true)}</li>
+            <li>${footerLink(RELEASES_URL, "Releases", true)}</li>
+            <li>${footerLink(ISSUES_URL, "Issue Tracker", true)}</li>
+            <li>${footerLink(PULLS_URL, "Contribute", true)}</li>
+            <li>${footerLink(FEED_PATH, "Release Feed")}</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-[11px] font-bold tracking-[0.18em] uppercase text-gray-400 mb-4">Legal</h3>
+          <ul class="space-y-2 text-sm font-medium text-gray-500">
+            <li>${footerLink("/privacy", "Privacy Policy")}</li>
+            <li>${footerLink("/terms", "Terms of Use")}</li>
+            <li>${footerLink("/licenses", "Licenses")}</li>
+            <li>${footerLink(`mailto:${CONTACT_EMAIL}`, "Contact")}</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/5 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <span class="text-gray-500 text-sm tracking-wide">
+          © <span id="footer-year">2026</span> Flick Player Contributors ·
+          <a href="/licenses" class="hover:text-white transition-colors">MIT License</a>
+        </span>
+        <span class="text-gray-600 text-xs text-center md:text-right max-w-md">
+          Flick is an independent project and is not affiliated with Google, Android, or any DAC manufacturer.
         </span>
       </div>
-
-      <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm font-medium text-gray-500">
-        <a href="/downloads" class="hover:text-white transition-colors">Downloads</a>
-        <a href="/release-notes" class="hover:text-white transition-colors">Release Notes</a>
-        <a href="https://github.com/ultraelectronica/Flick/releases" target="_blank" rel="noopener" class="hover:text-white transition-colors">GitHub Releases</a>
-        <a href="https://github.com/ultraelectronica/Flick/issues" target="_blank" rel="noopener" class="hover:text-white transition-colors">Issue Tracker</a>
-        <a href="https://github.com/ultraelectronica/Flick/pulls" target="_blank" rel="noopener" class="hover:text-white transition-colors">Contribute</a>
-      </div>
-
     </footer>
 
   </div>

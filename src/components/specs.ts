@@ -1,3 +1,7 @@
+import { REPO_URL } from "../site";
+
+const BENCHMARK_URL = `${REPO_URL}/blob/main/docs/scanning_benchmark05092026.md`;
+
 export function Specs(): string {
   return `
 <section class="bg-[#101010] text-white py-24 relative z-20 border-t border-white/5">
@@ -39,7 +43,7 @@ export function Specs(): string {
         <ul class="space-y-4">
           <li class="flex items-start text-sm text-gray-400 leading-relaxed">
             <svg class="w-4 h-4 text-gray-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-            <span><strong>MediaStore Sync:</strong> Differential database sync ~34× faster than filesystem walk, with background change observer.</span>
+            <span><strong>MediaStore Sync:</strong> Differential database sync <a href="${BENCHMARK_URL}" target="_blank" rel="noopener" class="text-gray-300 underline decoration-gray-500 underline-offset-4 hover:text-white hover:decoration-white">~34× faster</a> than filesystem walk, with background change observer.</span>
           </li>
           <li class="flex items-start text-sm text-gray-400 leading-relaxed">
             <svg class="w-4 h-4 text-gray-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>

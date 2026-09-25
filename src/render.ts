@@ -6,55 +6,47 @@ import { Contributors } from "./components/contributors";
 import { Footer } from "./components/footer";
 import { DownloadsPage } from "./components/downloads-page";
 import { ReleaseNotesPage } from "./components/release-notes-page";
+import { PrivacyPage } from "./components/privacy-page";
+import { TermsPage } from "./components/terms-page";
+import { LicensesPage } from "./components/licenses-page";
+import { CommunityPage } from "./components/community-page";
+import { AboutPage } from "./components/about-page";
+import { FaqPage } from "./components/faq-page";
+import { SupportedDacsPage } from "./components/supported-dacs-page";
+import { NotFoundPage } from "./components/not-found-page";
+import type { AppRoute } from "./routes";
 
-export type AppRoute = "home" | "downloads" | "release-notes";
+export { routeFromPath, routeMeta } from "./routes";
+export { SITE_ORIGIN } from "./site";
+export type { AppRoute } from "./routes";
 
 function pageMarkup(route: AppRoute): string {
-  if (route === "release-notes") return ReleaseNotesPage();
-  if (route === "downloads") return DownloadsPage();
-  return `${Hero()}${Features()}${Specs()}${Contributors()}`;
+  switch (route) {
+    case "downloads":
+      return DownloadsPage();
+    case "release-notes":
+      return ReleaseNotesPage();
+    case "privacy":
+      return PrivacyPage();
+    case "terms":
+      return TermsPage();
+    case "licenses":
+      return LicensesPage();
+    case "community":
+      return CommunityPage();
+    case "about":
+      return AboutPage();
+    case "faq":
+      return FaqPage();
+    case "supported-dacs":
+      return SupportedDacsPage();
+    case "not-found":
+      return NotFoundPage();
+    default:
+      return `${Hero()}${Features()}${Specs()}${Contributors()}`;
+  }
 }
 
 export function renderPage(route: AppRoute): string {
-  return `${Navbar(route)}${pageMarkup(route)}${Footer(route)}`;
-}
-
-export function routeFromPath(pathname: string): AppRoute {
-  const path = pathname.replace(/\/+$/, "") || "/";
-  if (path === "/release-notes") return "release-notes";
-  if (path === "/downloads") return "downloads";
-  return "home";
-}
-
-export const SITE_ORIGIN = "https://flick-player.site";
-
-export type RouteMeta = {
-  title: string;
-  description: string;
-  path: string;
-};
-
-const META: Record<AppRoute, RouteMeta> = {
-  home: {
-    title: "Flick — Bit-Perfect Audiophile Music Player",
-    description:
-      "Flick is a high-performance audiophile music player for Android, built with Flutter and Rust. Bit-perfect PCM and native DSD via UAC 2.0 DACs, with DAP bit-perfect through Oboe/AAudio exclusive mode.",
-    path: "/",
-  },
-  downloads: {
-    title: "Download Flick — Latest Android APK & Releases",
-    description:
-      "Download the latest Flick release for Android — a bit-perfect audiophile music player APK. Get bit-perfect PCM and native DSD playback through UAC 2.0 DACs.",
-    path: "/downloads",
-  },
-  "release-notes": {
-    title: "Flick Release Notes — Changelog & Updates",
-    description:
-      "Flick release notes and changelog. Track every update to the bit-perfect audiophile Android music player — new features, fixes, and contributors per release.",
-    path: "/release-notes",
-  },
-};
-
-export function routeMeta(route: AppRoute): RouteMeta {
-  return META[route];
+  return `<a href="#main-content" class="skip-link">Skip to content</a>${Navbar(route)}<main id="main-content">${pageMarkup(route)}</main>${Footer(route)}`;
 }

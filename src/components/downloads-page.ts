@@ -74,7 +74,7 @@ export function DownloadsPage(): string {
                   <button id="flick-card-download-btn" class="inline-flex w-full items-center justify-center rounded-xl border border-white/10 bg-white px-4 py-3 text-sm font-semibold tracking-tight text-black transition-all hover:bg-gray-200 active:scale-95 cursor-pointer sm:w-auto">
                     Download Flick APK
                   </button>
-                  <a href="https://github.com/ultraelectronica/Flick/releases" target="_blank" rel="noopener" class="inline-flex w-full items-center justify-center rounded-xl border border-white/10 bg-white/[0.06] px-4 py-3 text-sm font-semibold tracking-tight text-white transition-all hover:bg-white/10 sm:w-auto">
+                  <a href="https://github.com/moss-apps/Flick/releases" target="_blank" rel="noopener" class="inline-flex w-full items-center justify-center rounded-xl border border-white/10 bg-white/[0.06] px-4 py-3 text-sm font-semibold tracking-tight text-white transition-all hover:bg-white/10 sm:w-auto">
                     View release feed
                   </a>
                 </div>
@@ -119,7 +119,7 @@ export function DownloadsPage(): string {
                   <button id="prerelease-download-btn" class="inline-flex w-full items-center justify-center rounded-xl border border-amber-500/20 bg-amber-400 px-4 py-3 text-sm font-semibold tracking-tight text-black transition-all hover:bg-amber-300 active:scale-95 cursor-pointer sm:w-auto">
                     Download Pre-release APK
                   </button>
-                  <a id="prerelease-release-link" href="https://github.com/ultraelectronica/Flick/releases" target="_blank" rel="noopener" class="inline-flex w-full items-center justify-center rounded-xl border border-white/10 bg-white/[0.06] px-4 py-3 text-sm font-semibold tracking-tight text-white transition-all hover:bg-white/10 sm:w-auto">
+                  <a id="prerelease-release-link" href="https://github.com/moss-apps/Flick/releases" target="_blank" rel="noopener" class="inline-flex w-full items-center justify-center rounded-xl border border-white/10 bg-white/[0.06] px-4 py-3 text-sm font-semibold tracking-tight text-white transition-all hover:bg-white/10 sm:w-auto">
                     View pre-release notes
                   </a>
                 </div>
@@ -207,7 +207,7 @@ export function DownloadsPage(): string {
         <article class="rounded-[1.75rem] border border-white/10 bg-[#151515]/90 p-5 shadow-[0_18px_60px_rgba(0,0,0,0.35)]">
           <p class="text-[10px] font-bold tracking-[0.24em] uppercase text-gray-500">Direct Sources</p>
           <div class="mt-4 flex flex-col gap-3">
-            <a href="https://github.com/ultraelectronica/Flick/releases" target="_blank" rel="noopener" class="inline-flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-gray-300 transition-colors hover:text-white hover:bg-white/[0.06]">
+            <a href="https://github.com/moss-apps/Flick/releases" target="_blank" rel="noopener" class="inline-flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-gray-300 transition-colors hover:text-white hover:bg-white/[0.06]">
               <span>Flick releases</span>
               <span class="text-gray-500">GitHub</span>
             </a>
