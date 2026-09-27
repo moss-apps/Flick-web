@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-25T13:50:25.601Z",
+  "generatedAt": "2026-09-27T20:47:47.495Z",
   "app": {
     "name": "Flick Player",
-    "version": "0.22.0-beta.1+27",
+    "version": "0.22.0-beta.2+28",
     "license": "MIT",
     "url": "https://github.com/moss-apps/Flick",
     "text": "MIT License\n\nCopyright (c) 2026 Flick Player Contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
@@ -3255,16 +3255,10 @@
       "url": "https://www.npmjs.com/package/@eslint/js"
     },
     {
-      "name": "@fontsource-variable/dm-sans",
-      "version": "5.3.0",
+      "name": "@fontsource-variable/google-sans-flex",
+      "version": "5.3.1",
       "license": "OFL-1.1",
-      "url": "https://www.npmjs.com/package/@fontsource-variable/dm-sans"
-    },
-    {
-      "name": "@fontsource-variable/geist",
-      "version": "5.3.0",
-      "license": "OFL-1.1",
-      "url": "https://www.npmjs.com/package/@fontsource-variable/geist"
+      "url": "https://www.npmjs.com/package/@fontsource-variable/google-sans-flex"
     },
     {
       "name": "@fontsource-variable/jetbrains-mono",

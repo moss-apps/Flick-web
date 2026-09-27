@@ -1,11 +1,10 @@
 @import "tailwindcss";
-@import "@fontsource-variable/geist/index.css";
-@import "@fontsource-variable/dm-sans/index.css";
+@import "@fontsource-variable/google-sans-flex/opsz.css";
 @import "@fontsource-variable/jetbrains-mono/index.css";
 
 @theme {
-  --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "DM Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Google Sans Flex Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Google Sans Flex Variable", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono Variable", ui-monospace, SFMono-Regular, monospace;
   /* Raised from Tailwind defaults for readable contrast on #101010. */
   --color-gray-500: #8f97a6;
